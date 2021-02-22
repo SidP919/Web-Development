@@ -6,10 +6,47 @@
         </title>
     </head>
     <body>
-        <h1>My Homepage</h1>
+        <h1 id="top-heading">My Homepage</h1>
         <Div>Div is a block element
             <div> and </div>
                 <span> Span is an inline </span>element.
         </Div>
+        <div>
+            <code><!--it renders the content a little differently than the content outside its tags.-->
+                function fun(){
+                    Console.log("I am code.")
+                }
+            </code>
+        </div>
+        <pre><!--it renders the content exactly as we put it inside its tags-->
+            function fun(){
+                Console.log("I am code.")
+            }
+        </pre>
+
+        <!--Anchor tags-->
+        <a href="https://google.com" target="_blank" id="first-link">Go to Google</->
+        <br>
+        <br>
+        <a href="./Lists/list.html" target="_self">Go to Lists</a>
+        <br>
+        <br>
+        <a href="../Lecture_01/Lists/list.html" target="_blank">Go back and then go to Lists page</a>
+        <br>
+        <br>
+        <a href="mailto:sidp919@gmail.com" target="_self">Mail to myself</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="tel:987654321" target="_self">Call to No One</a>
+        <br>
+        <br>
+        <a href="#top-heading" target="_self">Go to top of this page</a>
+        <br>
+        <br>
+        <a href="index.htm#first-link" target="_self">Go to first link of this page</a>
+        <br>
+        <br>
     </body>
 </html>
