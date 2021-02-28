@@ -1,0 +1,42 @@
+  #wrapper {
+    width: 600px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 30px auto;
+  }
+
+  div {
+    width: 60%;
+    height: 40%;
+    border: 2px solid green;
+  }
+
+  article:first-of-type ul {
+    font-size: 30%;
+  }
+
+  article:first-of-type {
+    font-size: 100px;
+  }
+
+  article:nth-of-type(2) {
+    font-size: 20px;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  ul {
+    /* font-size: 2em;  */
+    /* Here, em = desired element pixel value / parent element font-size in pixels */
+    font-size: 2rem; /* rem values are relative to the root html element, not the parent element.
+     In other words, it lets you specify a font size in a relative fashion without being affected by the size of the parent */
+  }
+
+  #container {
+    border: 2px solid black;
+    background-color: cornflowerblue;
+    width: 70vw;
+    height: 80vh;
+  }
