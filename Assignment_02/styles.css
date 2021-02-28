@@ -1,0 +1,69 @@
+.first-letter{
+    background-color: rgb(191, 255, 236);
+    border: 2px solid rgb(255, 255, 176);
+    color: rgb(211, 0, 0);
+    padding: 8px 24px;
+    font-size: 2rem;
+    margin: 8px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+}
+
+.profile-icon{
+    border-radius: 50%;
+    width: 2em;
+    padding: 4px;
+    margin: 2px;
+    color: cornsilk;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.dial-icon{
+    padding: 8px;
+    margin: 4px;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.contact-name{
+    width: 10vw;
+    padding: 12px 20px 4px 16px;
+    margin: 12px 2px 2px 2px;
+    font-size: 1.5rem;
+}
+
+.phone-num{
+    width: 10vw;
+    padding: 12px 20px 4px 16px;
+    margin: 12px 2px 2px 2px;
+    font-size: 1rem;
+}
+
+.bg-color01{
+    background-color: red;
+}
+
+.bg-color02{
+    background-color: blue;
+}
+
+.bg-color03{
+    background-color: orchid;
+}
+
+.bg-color04{
+    background-color: green;
+}
+
+table{
+    display: block;
+    border-bottom: 1px solid grey;
+    padding: 4px;
+    margin: 0px 24px;
+}
+
+html{
+    background-color: rgb(247, 243, 239);
+}
