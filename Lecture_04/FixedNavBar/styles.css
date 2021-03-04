@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    width: 100%;
+    height: 50px;
+    background-color: #343a40;
+    font-size: 2rem;
+    position: fixed;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;
+  }
+
+  li:last-of-type {
+    position: absolute;
+    right: 40px;
+  }
+
+  p {
+    padding-top: 60px;
+  }
