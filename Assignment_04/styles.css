@@ -1,0 +1,165 @@
+/* Navigation Bar styles */
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    background-color:#f10014; 
+    /* #343a40; */
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    width: 100vw;
+  }
+
+.nav_a{
+    text-decoration: none;
+    color: white;
+    padding: 4px 8px;
+    margin: 8px 8px;
+    border: 2px solid whitesmoke;
+    border-radius: 20%;
+}
+
+.sign_up{
+    margin: 6px 36px 6px 36px;
+    padding: 4px 8px;
+}
+
+.nav_ul{
+    list-style: none;
+    display: flex;
+    justify-content:start;
+    width: 70vw;
+    padding: 4px 8px;
+    margin: 4px 16px;
+}
+
+@media screen and (max-width: 660px) {
+    nav,
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li{
+        margin: 2% 0px;
+    }
+  }
+
+  /* Main Content styles */
+  main{
+    width: 100vw;
+  }
+
+  .animated-img{
+    height: 70vh;
+    width: 100vw;
+    object-fit: cover;
+    border: 2px solid rgb(255, 0, 0);
+    background-size: cover;
+    background-origin: center;
+    /* Animation-Properties */
+    animation-name: change-it;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes change-it {
+    0% {
+      background-image: url('https://freeaddon.com/wallpaper/onepiece/bg-02.jpg');
+    }
+    20% {
+      background-image: url('https://freeaddon.com/wallpaper/onepiece/bg-19.jpg');
+    }
+    50% {
+      background-image: url('https://freeaddon.com/wallpaper/onepiece/bg-03.jpg');
+    }
+    80% {
+      background-image: url('https://freeaddon.com/wallpaper/onepiece/bg-12.jpg');
+    }
+    100% {
+      background-image: url('https://freeaddon.com/wallpaper/onepiece/bg-02.jpg');
+    }
+  }
+
+  .cards-section{
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: left;
+      font-size: 1.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color:crimson;
+      text-align: center;
+      background-color: rgb(255, 232, 232);
+  }
+
+  .card{
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.849);
+    padding: 8px;
+    transition: 0.2s;
+    box-shadow: 0px 2px 3px rgba(104, 104, 104);
+    transition: transform 0.2s 0.1s ease-in;
+  }
+
+  img{
+    height: 80%;
+    width: 95%;
+    object-fit:fill;
+    margin: 1%;
+  }
+
+  a{
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  .card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  /* Footer Styles */
+  footer {
+    background-color: #ff0015;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50px;
+    width: 100vw;
+  }
+
+.footer_a{
+    color: white;
+    padding: 4px 8px;
+    margin: 8px 8px;
+}
+
+.footer_ul{
+    list-style: none;
+    display: flex;
+    justify-content:center;
+    padding: 4px 8px;
+    margin: 4px 8px;
+}
+
+@media screen and (max-width: 660px) {
+    footer{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
