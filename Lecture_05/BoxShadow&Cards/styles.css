@@ -1,0 +1,96 @@
+/* Responsive Navbar using Flexboxes */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    background-color: #343a40;
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50px;
+    width: 100vw;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  
+    width: 390px;
+  }
+  
+  @media screen and (max-width: 530px) {
+    nav,
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Cards using transitions and transform */
+  
+  #main-img {
+    height: 60vh;
+    width: 100vw;
+    border: 1px solid #ccc;
+    background-color: cyan;
+    background-image: url(https://images.unsplash.com/photo-1529686342540-1b43aec0df75?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Ym84alFLVGFFMFl8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+    background-origin: center;
+  }
+  
+  .cards {
+    width: 90vw;
+    /* border: 1px solid rgb(235, 0, 0); */
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  article figure {
+    width: 300px;
+  }
+  
+  article figure img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  figcaption {
+    text-align: center;
+  }
+  
+  article h3 {
+    font-size: 1.8rem;
+    color: #1d3557;
+  }
+  article p {
+    font-size: 1.4rem;
+  }
+  
+  article button {
+    padding: 5px 30px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  article {
+    transition: all 0.2s;
+    box-shadow: 0px 2px 3px rgba(104, 104, 104);
+  }
+  
+  article:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
