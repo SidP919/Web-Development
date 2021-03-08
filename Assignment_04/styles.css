@@ -5,8 +5,7 @@ body {
   }
 
   nav {
-    background-color:#f10014; 
-    /* #343a40; */
+    background-color:#f10014;
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -14,6 +13,8 @@ body {
     align-items: center;
     min-height: 50px;
     width: 100vw;
+    position:fixed;
+    top: 0px;
   }
 
 .nav_a{
@@ -44,10 +45,11 @@ body {
     ul {
       flex-direction: column;
       align-items: center;
+      position:relative;
     }
 
     li{
-        margin: 2% 0px;
+        margin: 8px 0px;
     }
   }
 
@@ -57,12 +59,11 @@ body {
   }
 
   .animated-img{
-    height: 70vh;
+    height: 60vh;
     width: 100vw;
     object-fit: cover;
-    border: 2px solid rgb(255, 0, 0);
-    background-size: cover;
-    background-origin: center;
+    background-size: 100% 100%;
+    margin-top: 50px;
     /* Animation-Properties */
     animation-name: change-it;
     animation-duration: 16s;
@@ -108,7 +109,7 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: rgba(255, 0, 0, 0.849);
-    padding: 8px;
+    padding: 12px 8px;
     transition: 0.2s;
     box-shadow: 0px 2px 3px rgba(104, 104, 104);
     transition: transform 0.2s 0.1s ease-in;
@@ -129,6 +130,14 @@ body {
   .card:hover{
     transform: scale(1.1);
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 660px) {
+    .animated-img{
+        width: 100vw;
+        height: 40vh;
+        margin-top: 0;
+    }
   }
 
   /* Footer Styles */
