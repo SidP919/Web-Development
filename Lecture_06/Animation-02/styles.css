@@ -1,0 +1,36 @@
+div {
+    height: 100vh;
+    width: 100vw;
+    /* Animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count
+     animation-direction animation-fill-mode animation-play-state */
+    animation: 
+    gravity     /*animation-name*/ 
+    2s          /*animation-duration*/   
+    ease-in-out /*animation-timing-function */
+    1s          /*animation-delay*/
+    infinite    /*animation-iteration-count*/
+    alternate   /*animation-direction*/
+    forwards    /*animation-fill-mode*/
+    running;    /*animation-play-state*/
+  }
+  
+  div img {
+      width: 10%;
+      height: 10%;
+      padding: 0px 45%;
+      animation: 3.2s linear infinite rotate;
+  }
+  
+  @keyframes gravity {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(88vh);
+    }
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
