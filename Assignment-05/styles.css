@@ -1,0 +1,155 @@
+body{
+    background-color: rgba(0, 132, 255, 0.699);
+}
+
+/* Navigation Bar styles */
+.navbar{
+    top:0px;
+}
+.navbar-brand-text{
+    display: inline;
+    color: rgba(0, 132, 255, 0.699);
+    font-size: larger;
+}
+
+.btn:hover{
+    background-color: rgba(0, 132, 255, 0.699);
+}
+
+.btn-outline-success {
+    color:rgba(0, 132, 255, 0.699);
+    border-color: rgb(0, 132, 255);
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active,
+ .btn-outline-success:not(:disabled):not(.disabled):active,
+  .show>.btn-outline-success.dropdown-toggle{
+    background-color:rgba(0, 132, 255, 0.699);
+    border-color: rgb(0, 132, 255);
+}
+
+.btn-outline-success.focus, .btn-outline-success:focus{
+    box-shadow: 0 0 0 0.2rem rgb(0, 132, 255);
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active:focus,
+ .btn-outline-success:not(:disabled):not(.disabled):active:focus,
+ .show > .btn-outline-success.dropdown-toggle:focus{
+    box-shadow: rgb(0, 132, 255) 0px 0px 0px 0.2rem;
+ }
+
+/* Main Content styles */
+main{
+    margin-top: 56px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.slide-bar{
+    margin-top: 5%;
+}
+
+.slide-msg-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.carousel-caption {
+    bottom:20%;
+}
+
+section{
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+.white-anchor{
+    color:white;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1110px) {
+    
+    main{
+        margin-top: 88px;
+    }
+  }
+
+@media screen and (max-width: 975px) {
+    
+    *{
+        font-size: x-small;
+    }
+    main{
+      margin-top: 56px;
+    }
+    .carousel-caption {
+        top: 15%;
+        bottom: 5%;
+    }
+  }
+
+  @media screen and (max-width: 615px) {
+    *{
+        font-size: x-small;
+    }
+    main{
+      margin-top: 48px;
+    }
+}
+
+@media screen and (max-width: 556px) {
+    *{
+        font-size: xx-small;
+    }
+    main{
+      margin-top: 72px;
+    }
+    .carousel-caption {
+        top: 5%;
+        bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    *{
+        font-size: 0.2em;
+    }
+    main{
+        margin-top: 48px;
+    }
+    .carousel-caption {
+        top: 15%;
+        bottom: 5%;
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    *{
+        font-size: 0.2em;
+    }
+    main{
+        margin-top: 16px;
+    }
+    .carousel-caption {
+        top: 10%;
+        bottom: 5%;
+    }
+  }
+
+  @media screen and (max-width: 295px) {
+    *{
+        font-size: 0.005em;
+    }
+    main{
+        margin-top: 56px;
+    }
+    .carousel-caption {
+        top: 5%;
+        bottom: 5%;
+    }
+  }
