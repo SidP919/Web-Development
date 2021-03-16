@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Portfolio</title>
 </head>
-<body class="container-fluid mb-5" background="./images/blue-bg.png">
+<body class="container-fluid pr-5 pb-5 pl-5" background="./images/blue-bg.png">
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="#">
@@ -18,16 +18,16 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="./index.html#career-obj">Career Objective</a></li>
-                  <li class="nav-item"><a class="nav-link" href="./index.html#work-exp">Work Experience</a></li>
-                  <li class="nav-item"><a class="nav-link" href="./index.html#skills">Skills</a></li>
-                  <li class="nav-item"><a class="nav-link" href="./index.html#projects">Projects</a></li>
-                  <li class="nav-item dropdown">
+                  <li class="nav-item active"><a class="nav-link" href="./index.html#career-obj">Career Objective</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="./index.html#work-exp">Work Experience</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="./index.html#skills">Skills</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="./index.html#projects">Projects</a></li>
+                  <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       More
                     </a>
@@ -39,6 +39,9 @@
                     </div>
                   </li>
                 </ul>
+                <form class="form-inline">
+                    <a class="btn my-2 my-sm-0 text-white border-white resume-btn" role="button" href="https://drive.google.com/uc?export=download&id=1OGPZwFb7DJkPw5od7Jfe7HI5hBUNfd3O">Download Resume</a>
+                  </form>
               </div>
           </nav>
     </header>
@@ -102,19 +105,19 @@
             </div>
         </section>
         <div id="career-obj"></div>
-        <section class="container">
-            <h1 class="display-3">Career Objective</h1>
+        <section class="container-fluid">
+            <h1 class="display-4">Career Objective</h1>
             <p class="lead pl-3">I seek the opportunities to enhance my skills and understanding, so that I will be able
                 to fulfil the objectives of the organization I work for and be a part in its growth.</p>
         </section>
         <div id="work-exp"></div>
-        <section class="container">
-            <h1 class="display-3">Work Experience</h1>
+        <section class="container-fluid">
+            <h1 class="display-4">Work Experience</h1>
             <p class="lead pl-3">Assistant System Engineer at Tata Consultancy Services – from July 2019 to present</p>
         </section>
         <div id="skills"></div>
-        <section class="container">
-            <h1 class="display-3">Skills</h1>
+        <section class="container-fluid">
+            <h1 class="display-4">Skills</h1>
             <article class="pl-3">
                 <p class="lead"><strong>Programming Technologies:</strong> Core Java, Android Application Development,
                     Python, HTML5, CSS, JavaScript</p>
@@ -125,24 +128,32 @@
             </article>
         </section>
         <div id="projects"></div>
-        <section class="container">
-            <h1 class="display-3">Projects</h1>
+        <section class="container-fluid">
+            <h1 class="display-4">Projects</h1>
             <p class="lead pl-3">Please find samples of my work at my GitHub account- <a
                     href="https://www.gitHub.com/SidP919" target="_blank">GitHub.com/SidP919</a></p>
         </section>
         <div id="education"></div>
-        <section class="container">
-            <h1 class="display-3">Education</h1>
+        <section class="container-fluid">
+            <h1 class="display-4">Education</h1>
             <article class="p-3">
-                <p class="lead"><strong>JSS Academy of Technical Education, NOIDA</strong></p>
-                <p class="lead pl-3">2019 – Bachelor of Technology in Computer Science & Engineering</p>
-                <p class="lead"><strong>Government Polytechnic Kanpur</strong></p>
-                <p class="lead pl-3">2016 – Diploma in Electrical Engineering</p>
+                <div>
+                    <a class="btn btn-link td-none text-primary" data-toggle="collapse" href="#collapseTile1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="lead"><strong>JSS Academy of Technical Education, NOIDA</strong></p>
+                    </a>
+                    <p class="lead pl-5 collapse" id="collapseTile1">2019 – Bachelor of Technology in Computer Science & Engineering</p>
+                </div>
+                <div>
+                    <a class="btn btn-link td-none  text-primary" data-toggle="collapse" href="#collapseTile2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="lead"><strong>Government Polytechnic Kanpur</strong></p>
+                    </a>
+                    <p class="lead pl-5 collapse" id="collapseTile2">2016 – Diploma in Electrical Engineering</p>
+                </div>
             </article>
         </section>
         <div id="trainings"></div>
-        <section class="container">
-            <h1 class="display-3">Trainings</h1>
+        <section class="container-fluid">
+            <h1 class="display-4">Trainings</h1>
             <article class="lead p-3">
                 <p class="lead"><strong>Offline Trainings:</strong></p>
                 <p class="lead pl-3">Java Programming from Aptech Computer Education (Branch: Kanpur)</p>
@@ -155,8 +166,8 @@
             </article>
         </section>
         <div id="certifications"></div>
-        <section class="container">
-            <h1 class="display-3">Certifications</h1>
+        <section class="container-fluid">
+            <h1 class="display-4">Certifications</h1>
             <article>
                 <p class="lead pl-3">Udacity’s <a
                         href="https://graduation-api.udacity.com/api/certificate/MN37F3VU/download"
@@ -177,8 +188,8 @@
             </article>
         </section>
         <div id="connect"></div>
-        <section class="container">
-            <h1 class="display-3">Connect with me</h1>
+        <section class="container-fluid">
+            <h1 class="display-4">Connect with me</h1>
             <article class="lead p-3">
                 <p class="lead pl-3"><strong>GitHub a/c: </strong><a href="https://github.com/SidP919"
                         target="_blank">Github.com/SidP919</a></p>
@@ -186,7 +197,27 @@
                         target="_blank">Linkedin.com/in/Sidp919</a></p>
             </article>
         </section>
-    </main>
+        <section class="container-fluid">
+            <p>
+                <a class="btn btn-link td-none" data-toggle="collapse" href="#collapseTile1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <p class="lead td-none"><strong>JSS Academy of Technical Education, NOIDA</strong></p>
+                </a>
+                <a class="btn btn-link td-none" data-toggle="collapse" href="#collapseTile2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <p class="lead td-none"><strong>Government Polytechnic Kanpur</strong></p>
+                </a>
+            </p>
+              <div class="collapse" id="collapseTile1">
+                <div class="card card-body">
+                    <p class="lead pl-3 collapse" id="collapseTile1">2019 – Bachelor of Technology in Computer Science & Engineering</p>
+                </div>
+              </div>
+              <div class="collapse" id="collapseTile2">
+                <div class="card card-body">
+                    <p class="lead pl-3 collapse" id="collapseTile2">2016 – Diploma in Electrical Engineering</p>
+                </div>
+              </div>
+            </section>
+        </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
