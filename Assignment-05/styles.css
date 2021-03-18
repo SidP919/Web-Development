@@ -4,7 +4,7 @@ body{
 
 /* Header */
 .resume-btn:hover, .resume-btn:active{
-    background-color:dodgerblue;
+    background-image: url('./images/blue-bg.png');
     border:2px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px -2px rgb(255, 255, 255);
@@ -28,6 +28,13 @@ section{
     background: white;
     border-radius: 20px;
 }
+
+.card{
+    background-image: url('./images/blue-bg.png');
+    height: 100%;
+    min-width: 20vw;
+    font-size: small;
+    }
 
 /* Media Queries */
 /* // Large devices (desktops, more than 1200px) */
@@ -82,7 +89,7 @@ section{
         font-size: large;
     }
     .slider-section{
-        margin-top: 11%;
+        margin-top: 13%;
     }
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
         font-size: larger;    
@@ -100,7 +107,7 @@ section{
         font-size: x-small;
     }
     .slider-section{
-        margin-top: 18%;
+        margin-top: 16%;
     }
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
         font-size: small;    
