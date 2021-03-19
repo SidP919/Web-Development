@@ -32,10 +32,11 @@ section{
 .card{
     background-image: url('./images/blue-bg.png');
     height: 100%;
-    min-width: 20vw;
+    min-width: 10vw;
     font-size: small;
     }
 
+    
 /* Media Queries */
 /* // Large devices (desktops, more than 1200px) */
 @media (min-width: 1199.98px) { 
