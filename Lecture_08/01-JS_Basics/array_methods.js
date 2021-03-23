@@ -13,7 +13,6 @@ console.log(str.substring(2));
 
 
 
-
 //indexOf() method-------------------------------------------------------------------------------------------->
 console.log('\n indexOf() method o/p:');
 
@@ -92,4 +91,79 @@ console.log(`Chorus lyrics for "Happy": ${chorus.repeat(5)}`);
 
 
 
+//slice() method------------------------------------------------------------------------------------------>
+console.log('\n slice method o/p:');
+
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// expected output: Array ["bison", "camel", "duck", "elephant"]
+
+
+
+
+
+
+//splice() mehtod------------------------------------------------------------------------------------------>
+console.log('\n splice method o/p:');
+
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// inserts at index 1
+console.log(months);
+// expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, 'May');
+// replaces 1 element at index 4
+console.log(months);
+// expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+
+
+
+
+
+
+
+//split() mehtod------------------------------------------------------------------------------------------>
+console.log('\n split method o/p:');
+
+const str1 = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str1.split(' ');
+console.log(words[3]);
+// expected output: "fox"
+
+const chars = str1.split('');
+console.log(chars[8]);
+// expected output: "k"
+
+const strCopy = str1.split();
+console.log(strCopy);
+// expected output: Array ["The quick brown fox jumps over the lazy dog."]
+
+
+
+
+
+
+//join() mehtod------------------------------------------------------------------------------------------>
+console.log('\n join method o/p:');
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// expected output: "Fire-Air-Water"
 
