@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>To-Do-List Web App</title>
+</head>
+<body background="./images/to-do-list-bg.jpg">
+    <header>
+        <!-- Fixed Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">
+              <img src="./images/todo_list_icon.png" width="30" height="30" 
+              class="d-inline-block align-top bg-white rounded" alt="ToDoList icon">
+              <p class="text-white d-inline mt-0 font-weight-bold">To-Do-List</p>
+            </a>
+        </nav>
+    </header>
+    <main class="p-1">
+        <section id="to-do-item-section" class="p-1 m-1">
+            <!-- Add item -->
+            <div id="add-item-div" class="text-center p-1 m-1">
+                <input type="text" id="toDoItem" name="toDoItem" 
+                    class="p-1 m-1 w-50 border-primary align-middle text-primary rounded" 
+                    placeholder="Add/enter To-do item here"/>
+                <button id="add-item-btn" onclick="addItem()" name="add-item-btn" class="bg-primary m-1 text-white add-item-btn rounded d-inline-block">
+                    <img src="./images/add_item_icon.png" width="40" height="40" class="align-middle" 
+                    alt="Add Item Button">
+                </button>
+            </div>
+            <!-- Item List -->
+            <ul id="item-list" name="item-list" class="item-list list-unstyled text-center p-1 m-1">
+            </ul>
+        </section>
+    </main>
+    <div id="item-div" style="visibility:collapse;">
+        <p name="item-text" 
+            class="item-text p-3 m-1 w-50 d-inline-block align-middle text-primary text-truncate rounded text-center"></p>
+        <div id="item-btn-div" class="d-inline-block">
+            <button name="edit-item-btn" 
+                class="edit-item-btn btn py-1 px-4 m-1 h-25 text-white border-white add-item-btn bg-primary align-middle">
+                    <img src="./images/edit-item-icon.png" width="30" height="30" class="align-middle pr-2" alt="">Edit</button>
+            <button name="delete-item-btn" 
+                class="delete-item-btn btn py-1 px-3 m-1 h-25 text-white border-white add-item-btn bg-primary align-middle">
+                    <img src="./images/delete-item-icon-png.png" width="30" height="30" class="align-middle pr-2" alt="">Delete</button>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
