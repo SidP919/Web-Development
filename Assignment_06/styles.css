@@ -30,7 +30,7 @@ main{
 
 .item-text{
     border: 2px solid blue;
-    background-color: rgb(224, 255, 255);
+    background-color: rgba(0, 162, 255, 0.788);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;

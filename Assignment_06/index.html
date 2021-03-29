@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Primary Meta Tags-->
+    <meta name="title" content="To-Do-List Web App">
+    <meta name="description" content="Hey there, this is a To-Do-List App for keeping your To-Dos Handy.">
+    <!--Pre-existing Meta Tags-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,11 +27,12 @@
         <section id="to-do-item-section" class="p-1 m-1">
             <!-- Add item -->
             <div id="add-item-div" class="text-center p-1 m-1">
-                <input type="text" id="toDoItem" name="toDoItem" 
+                <input type="text" id="toDoItem" name="toDoItem"
                     class="p-1 m-1 w-50 border-primary align-middle text-primary rounded" 
-                    placeholder="Add/enter To-do item here"/>
-                <button id="add-item-btn" onclick="addItem()" name="add-item-btn" class="bg-primary m-1 text-white add-item-btn rounded d-inline-block">
-                    <img src="./images/add_item_icon.png" width="40" height="40" class="align-middle" 
+                    placeholder="Add To-do Tasks here and press Enter"
+                    onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';"/>
+                <button id="add-item-btn" onclick="addItem()" name="add-item-btn" class="bg-primary m-1 text-white add-item-btn rounded d-inline-block text-center align-middle">
+                    <img src="./images/add_item_icon.png" width="30" height="30" class="align-middle text-center m-1" 
                     alt="Add Item Button">
                 </button>
             </div>
@@ -36,19 +41,24 @@
             </ul>
         </section>
     </main>
+    <!-- Sample List Item Div-->
     <div id="item-div" style="visibility:collapse;">
         <p name="item-text" 
-            class="item-text p-3 m-1 w-50 d-inline-block align-middle text-primary text-truncate rounded text-center"></p>
+            class="item-text p-3 m-1 w-50 d-inline-block align-middle text-white font-weight-bold text-truncate rounded text-center"></p>
         <div id="item-btn-div" class="d-inline-block">
             <button name="edit-item-btn" 
                 class="edit-item-btn btn py-1 px-4 m-1 h-25 text-white border-white add-item-btn bg-primary align-middle">
-                    <img src="./images/edit-item-icon.png" width="30" height="30" class="align-middle pr-2" alt="">Edit</button>
+                    <img src="./images/edit-item-icon.png" width="30" height="30" class="align-middle pr-2" alt="Edit">Edit</button>
             <button name="delete-item-btn" 
                 class="delete-item-btn btn py-1 px-3 m-1 h-25 text-white border-white add-item-btn bg-primary align-middle">
-                    <img src="./images/delete-item-icon-png.png" width="30" height="30" class="align-middle pr-2" alt="">Delete</button>
+                    <img src="./images/delete-item-icon-png.png" width="30" height="30" class="align-middle pr-2" alt="Delete">Delete</button>
         </div>
     </div>
-    <footer></footer>
+    <footer class="container-fluid fixed-bottom bg-primary">
+        <div class="text-center pb-0 pt-2 text-white">
+            <p>Technologies Used: HTML, CSS, bootstrap, JavaScript, DOM Manipulation. See its code <a href="https://github.com/SidP919/Web-Development/tree/master/Assignment_06" target="_blank"><strong class="text-white">here</strong></a></p>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
