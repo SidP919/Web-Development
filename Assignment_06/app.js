@@ -71,6 +71,13 @@ toDoList.addEventListener('click', function(event) {
         }
         //Edit functionality code
         else if(targetElement.innerText === 'Edit'){
+            
+            //removing extra 'Update' from the addItemBtn
+            if(addItemBtn.childNodes.length>3){
+                console.log(addItemBtn.childNodes[3].innerText);
+                addItemBtn.removeChild(addItemBtn.childNodes[3]);
+            }
+
             console.log('Edit is Clicked!');
             const editBtn = targetElement;
             console.log('Item to be Edited: \n' + editBtn.parentElement.parentElement.innerHTML);
