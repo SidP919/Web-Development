@@ -1,7 +1,9 @@
 # Web-Development
-This repository showcases my journey to be a MERN-Full-Stack Web Developer. By going through all the commits one-by-one, starting from the first one, where each commit explains a particular topic/concept of a particular technology/language/skill/tool, one can study and learn/understand Web Development technologies. (Still in Progress)
+This repository showcases my journey to be a MERN-Full-Stack Web Developer. By going through all the commits one-by-one, starting from the first one, where each commit explains a particular topic/concept of a particular technology/language/skill/tool, one can study and learn/understand Web Development technologies. 
 
-Check-out this repository and its Lectures/Assignments in Action at https://sidp919.github.io/Web-Development/
+Status - in Progress
+
+Check-out this repository and its Lectures/Assignments(Projects) in Action at https://sidp919.github.io/Web-Development/
 
 # Check-out various projects made through Assignments in this repo at below links:
   
@@ -15,8 +17,11 @@ Check-out this repository and its Lectures/Assignments in Action at https://sidp
   
   5> Assignment-05 - Portfolio - https://sidp919.github.io/Web-Development/Assignment-05/index.html
   
+  5> Assignment-06 - To-Do-List App - https://sidp919.github.io/Web-Development/Assignment_06/index.html
 
 Developed By:
+
 Sidharth Pandey( Sidp0008@gmail.com)
+
 
 Happy Learning! ☺️
