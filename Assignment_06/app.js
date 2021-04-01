@@ -20,22 +20,35 @@ function addItem(e){
     const inputText = ''+addItemText.value;
     console.log('inputText: ' + inputText);
 
+    //Validate if the addItemText input box is empty or not before adding a list item
     if(inputText===''){
         alert('Enter a valid list item.');
         return;
     }
 
+    //get Sample item-div element
     const listItem = document.getElementById('item-div');
     
+    //get last <p> element(which is inside our sample item-div element) having ClassName item-text 
+    //and assign inputText value to it
     const itemText = document.getElementsByClassName('item-text');
     itemText[itemText.length-1].innerText = inputText;
     console.log('itemText: ' + itemText[itemText.length-1].innerHTML);
     
+    //create parent element <li> for our item-div element
     const li = document.createElement('li');
+    //put our item-div element inside the <li> element
     li.innerHTML = listItem.innerHTML;
 
+    //add our modified <li> element to our toDoList
     toDoList.appendChild(li);
+    
+    //empty the addItemText input box after adding the list item to the list
     addItemText.value = "";
+
+    //empty the sample div's <p> element again 
+    //so it doesn't occupy unnecessary space after addition of list item.
+    itemText[itemText.length-1].innerText = "";
 
     console.log('Updated To-Do List: \n' + toDoList.innerHTML);
 
