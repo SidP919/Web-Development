@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" 
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./jquery-3.6.0.js"></script>
+    <title>Weather Web App</title>
+</head>
+<body background='./images/blue-bg.png' class="p-2 bg-primary">
+    <header>
+        <!-- Fixed Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">
+              <img src="./images/weather-app-icon.jpeg" width="30" height="30" 
+              class="d-inline-block align-top bg-white rounded mx-1" alt="app-icon">
+              <p class="text-white d-inline mt-0 font-weight-bold">Weather Web App</p>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <!-- Input-Box -->
+        <section class="search-box mx-auto rounded">
+            <div class="text-center">
+                <input type="text" id="city-name" name="city-name"
+                    class="city-name border-light lead w-100 align-middle text-black p-1 text-center" 
+                    placeholder="Enter City name and press enter"/>
+            </div>
+        </section>
+        <!-- Weather-Box -->
+        <section class="weather-box w-25 h-25 mx-auto rounded p-2 m-1">
+            <div>
+                <h3 id="city-country-name" class="text-center text-white"></h3>
+            </div>
+            <div id="default-div" class="text-center text-white">
+                <img id="default-img" src="./images/weather-app-icon.jpeg" class="d-inline-block" width="100" height="100" alt="app-icon">
+                <h3 id="default-text">I need a City name to do something.</h3>
+            </div>
+            <div>
+                <h3 id="current-date" class="text-center text-white"></h3>
+            </div>
+            <div>
+                <h1 class="display-1 text-center text-white"><strong id="current-temp"></strong></h1>
+            </div>
+            <div>
+                <h3 class="text-center text-white"><em id="today-atmos"></em></h3>
+            </div>
+            <div>
+                <h4 id="today-min-max-temp" class="text-center text-white"></h4>
+            </div>
+        </section>
+    </main>
+    <footer class="container-fluid fixed-bottom bg-primary">
+        <div class="text-center pb-0 pt-2 text-white">
+            <p>Technologies Used: HTML, CSS, bootstrap, JavaScript, EventListeners, JQuery, OpenWeather Web API. See its code <a href="https://github.com/SidP919/Web-Development/tree/master/Assignment_06" target="_blank"><strong class="text-white">here</strong></a></p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
