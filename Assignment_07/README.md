@@ -8,11 +8,11 @@ Check-out this Weather app/project in Action at https://sidp919.github.io/Web-De
 
 # Application Flows:
 
-01. when a valid city name is entered ![Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#01-when-a-valid-city-name-is-entered-1)
+01. when a valid city name is entered [Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#01-when-a-valid-city-name-is-entered)
 
-02. when an invalid city name is entered ![Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#02-when-an-invalid-city-name-is-entered-1)
+02. when an invalid city name is entered [Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#02-when-an-invalid-city-name-is-entered)
 
-03. when the city name is empty and enter has been pressed ![Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#03-when-the-city-name-is-empty-and-enter-has-been-pressed-1)
+03. when the city name is empty and enter has been pressed [Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#03-when-the-city-name-is-empty-and-enter-has-been-pressed)
 
 
 
