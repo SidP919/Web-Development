@@ -17,7 +17,10 @@ Check-out this repository and its Lectures/Assignments(Projects) in Action at ht
   
   5> Assignment-05 - Portfolio - https://sidp919.github.io/Web-Development/Assignment-05/index.html
   
-  5> Assignment-06 - To-Do-List App - https://sidp919.github.io/Web-Development/Assignment_06/index.html
+  6> Assignment-06 - To-Do-List App - https://sidp919.github.io/Web-Development/Assignment_06/index.html
+  
+  7> Assignment-07 - Weather Web App - https://sidp919.github.io/Web-Development/Assignment_07/index.html
+
 
 Developed By:
 
