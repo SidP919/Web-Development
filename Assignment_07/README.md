@@ -1,6 +1,6 @@
 # Weather App
 This is a Weather Web App. Enter a city name and press enter to know various details about the weather in that particular city.
-Used Technologies: HTML, CSS, Bootstrap, JavaScript, EventListeners, JQuery, AJAX, OpenWeather Web API
+Used Technologies: HTML, CSS, Bootstrap, JavaScript, JQuery, OpenWeather Web API
 
 Check-out this Weather app/project in Action at https://sidp919.github.io/Web-Development/Assignment_07/index.html
 
