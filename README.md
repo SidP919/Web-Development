@@ -1,9 +1,9 @@
 # Web-Development
-This repository showcases my journey to be a MERN-Full-Stack Web Developer. By going through all the commits one-by-one, starting from the first one, where each commit explains a particular topic/concept of a particular technology/language/skill/tool, one can study and learn/understand Web Development technologies. 
+This repository showcases my journey to be a MERN-Full-Stack Web Developer. I have added all the code from the lectures I learned from and also the code for all the Projects I made during this journey. 
+Please check out the Lectures and Assignments(Projects/Apps) I developed in action at https://sidp919.github.io/Web-Development/
 
-Status - in Progress
-
-Check-out this repository and its Lectures/Assignments(Projects) in Action at https://sidp919.github.io/Web-Development/
+Completion Status - In Progress
+#
 
 # Check-out various projects made through Assignments in this repo at below links:
   
@@ -20,7 +20,7 @@ Check-out this repository and its Lectures/Assignments(Projects) in Action at ht
   6> Assignment-06 - To-Do-List App - https://sidp919.github.io/Web-Development/Assignment_06/index.html
   
   7> Assignment-07 - Weather Web App - https://sidp919.github.io/Web-Development/Assignment_07/index.html
-
+#
 
 Developed By:
 
