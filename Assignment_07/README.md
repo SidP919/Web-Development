@@ -16,9 +16,7 @@ Check-out this Weather app/project in Action at https://sidp919.github.io/Web-De
 
 03. when the city name is empty and enter has been pressed [Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#03-when-the-city-name-is-empty-and-enter-has-been-pressed)
 
-04. when we face some other issue like internet connection issue or web api server down issue [Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#04-when-we-face-some-other-issue-like-internet-connection-issue-or-web-api-server-down-issue)
-
-#
+04. when some other issue occurs like internet connection issue or web api server down issue [Click here](https://github.com/SidP919/Web-Development/tree/master/Assignment_07#04-when-some-other-issue-occurs-like-internet-connection-issue-or-web-api-server-down-issue)
 #
 
 # 01. when a valid city name is entered
