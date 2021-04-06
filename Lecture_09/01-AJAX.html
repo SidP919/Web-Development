@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" 
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>01 - AJAX</title>
+</head>
+<body class="container-fluid bg-primary p-2">
+    <main class="container-fluid bg-white p-2">
+        <h1><u>01 - AJAX</u></h1>
+        <div class="container">
+            <pre class="bg-dark text-white p-3">
+//01 - AJAX
+//==========
+//It is a web technique which is used to send the request/fetch the data 
+//to and from a web server without disturbing the current web page.
+
+//Data which comes back in Response from the web server can be of different formats like:
+// 1 - XML
+// 2 - JSON
+
+// SAMPLE JSON RESPONSE from web server:
+//=======================================
+const responseData = `{"ticker":{"base":"BTC","target":"USD","price":"58644.00531423","volume":"30840.50161891","change":"145.79436814"},"timestamp":1617202443,"success":true,"error":""}`;
+
+const parsedData = JSON.parse(responseData);//JSON.parse( ResponseData ) converts response into JSON formatted data.
+
+console.log('1st Parsed Data: ');
+console.log(parsedData);
+
+console.log('Price from 1st Parsed Data: ');
+console.log(parsedData.ticker.price);
+
+// =======================Sending AJAX Requests Using JS================================
+// ==========================================================================================
+
+// oldest way of sending request ( Using XMLHttpRequest ):
+// ==============================
+const req = new XMLHttpRequest();
+
+req.onload = function () {
+    console.log('2nd Response Data: ');
+    console.log(this.responseText);
+    console.log('2nd Parsed Data: ');
+    const parsedData2 = JSON.parse(this.responseText);
+    console.log('Price from 2nd Parsed Data: ');
+    console.log(parsedData2.ticker.price);
+}
+
+req.onerror = function () {
+    console.log(err);
+}
+req.open('GET', 'https://api.cryptonator.com/api/ticker/btc-usd');
+req.send();
+
+// ---------------------------------------------------------------------
+
+// New Way of sending Request ( Using fetch ):
+// ===========================================
+fetch('https://api.cryptonator.com/api/ticker/btc-usd')
+    .then(responseData3 => {
+        console.log('3rd Response Data: ');
+        console.log(responseData3);
+        return responseData3.json();
+    })
+    .then(parsedData3 => {
+        console.log('3rd Parsed Data: ');
+        console.log(parsedData3);
+        console.log('Price from 3rd Parsed Data: ');
+        console.log(parsedData3.ticker.price);
+    })
+    .catch(err => {
+        console.log("Error");
+        console.log(err);
+    });
+
+// Note: For more such publicly available Web APIs, 
+// please checkout here - https://github.com/public-apis/public-apis
+
+            </pre>
+        </div>
+    </main>
+    <footer class="p-3">
+        <p class="d-block text-center text-white">Next: 
+            <a class="text-white" href="./02-Axios.html">Go to 02 - Axios</a></p>
+    </footer>
+    <script>
+// SAMPLE JSON RESPONSE from web server:
+//=======================================
+const responseData = `{"ticker":{"base":"BTC","target":"USD","price":"58644.00531423","volume":"30840.50161891","change":"145.79436814"},"timestamp":1617202443,"success":true,"error":""}`;
+
+const parsedData = JSON.parse(responseData);//we parse the response using JSON.parse( ResponseData );
+
+console.log('1st Parsed Data: ');
+console.log(parsedData);
+
+console.log('Price from 1st Parsed Data: ');
+console.log(parsedData.ticker.price);
+
+// =======================Sending AJAX Requests Using JS================================
+// ==========================================================================================
+
+// oldest way of sending request ( Using XMLHttpRequest ):
+// ==============================
+const req = new XMLHttpRequest();
+
+req.onload = function () {
+    console.log('2nd Response Data: ');
+    console.log(this.responseText);
+    console.log('2nd Parsed Data: ');
+    const parsedData2 = JSON.parse(this.responseText);
+    console.log('Price from 2nd Parsed Data: ');
+    console.log(parsedData2.ticker.price);
+}
+
+req.onerror = function () {
+    console.log(err);
+}
+req.open('GET', 'https://api.cryptonator.com/api/ticker/btc-usd');
+req.send();
+
+// ---------------------------------------------------------------------
+
+// New Way of sending Request ( Using fetch ):
+// ===========================================
+fetch('https://api.cryptonator.com/api/ticker/btc-usd')
+    .then(responseData3 => {
+        console.log('3rd Response Data: ');
+        console.log(responseData3);
+        return responseData3.json();
+    })
+    .then(parsedData3 => {
+        console.log('3rd Parsed Data: ');
+        console.log(parsedData3);
+        console.log('Price from 3rd Parsed Data: ');
+        console.log(parsedData3.ticker.price);
+    })
+    .catch(err => {
+        console.log("Error");
+        console.log(err);
+    });
+
+//Note: For more such publicly available Web APIs, please checkout here - https://github.com/public-apis/public-apis
+    </script>
+</body>
+</html>
