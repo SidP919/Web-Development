@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" 
+            integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <title>NodeJS_Intro</title>
+    </head>
+    <body class="container-fluid bg-primary p-2">
+        <main class="container-fluid bg-white p-2">
+            <h1><u>01 - NodeJS_Intro</u></h1>
+            <div class="container">
+                <pre class="bg-dark text-white p-3">
+    // NodeJS: It is a JavaScript Runtime Environment
+    // =======
+    //
+    // After NodeJS installation, in terminal, write: node
+    // Output:
+    // ========
+    // Welcome to Node.js v14.16.0.
+    // Type ".help" for more information.
+    // > .help
+    // .break    Sometimes you get stuck, this gets you out
+    //     .clear    Alias for .break
+    //     .editor   Enter editor mode
+    //     .exit     Exit the REPL
+    //     .help     Print this help message
+    //     .load     Load JS from a file into the REPL session
+    //     .save     Save all evaluated commands in this REPL session to a file
+    // 
+    // Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
+    //
+    //---------------------------------------------------------------------------
+    // Write any REPL expression:
+    // ===========================
+    // > 1+2+3*2+6/2+7%4 === 15
+    // OUTPUT:
+    // =======
+    // true
+    //
+    // Exit the REPL mode with command: .exit
+    // 
+    //------------------------------------------------------------------------------
+    // More Notes:
+    // ===========
+    // 1> For NodeJS, Global object is "global", just like "window" was for Browser
+    // 2> create a dir with: mkdir <dir-name>
+    // 3> list out the files in the dir with: ls
+    // 4> cd to change the dir: cd <move-to-dir-name>
+    // 5> to move out of the current dir to its parent dir: cd ..
+    // 6> to remove/delete an empty dir: rm -r <to-be-deleted-dir-name>
+    // 7> to remove/delete non-empty dir(forcefully): rm -rf <to-be-deleted-dir-name>
+    // 8> to run a js file, go to the dir where the js file is present and write:
+    //  > node <js-file-name>
+    //
+    //----------------------------------------------------------------------------------
+    // Process: 
+    // =========
+    //      It is an object inside NodeJS that contains info about
+    //      all the process currently running and
+    //      it is also used to get the inputs from the command line.
+    //      
+    //      Go to REPL mode by typing: node
+    //      then, write: process
+    //      then, write: process.cwd();
+    //      this will give you the current working directory,
+    //      that is the file being run with its path.
+    //
+    //      Now, check below code from Index.js file below:
+
+        console.log(process.argv);
+
+        const arr = process.argv.slice(2);
+        //in above code, 
+        //process.argv returns an array whose elements, 
+        //excluding the first two elements, represents the
+        //input values passed as command line arguments.
+        //we use slice(2) to exclude the first two elements
+        //which we don't need. 
+
+        for(let user of arr){
+            console.log(`Hello from ${user}`);
+        }
+
+    // Now in terminal, exit the REPL mode( by typing, .exit), 
+    // and run: node index.js Sam Ram Rahim
+    // OUTPUT:
+    // =======
+    // [
+    //    'C:\\Program Files\\nodejs\\node.exe',
+    //    'E:\\Newfolder\\CSE\\Docs\\CSE\\Miscellaneous\\Study\\Web Dev\\Nagarro Bootcamp\\Web Development\\Lecture_10\\01-NodeJS_Intro\\index.js',
+    //    'Sam',
+    //    'Ram',
+    //    'Rahim'
+    // ]
+    // Hello from Sam
+    // Hello from Ram
+    // Hello from Rahim
+    //
+    //--------------------------------------------------------------------------------
+    //
+    // Almost unrelated but, a programming problem - FizzBuzz:
+    // 1- FizzBuzz.js <a href="./fizzBuzz.js">Click here</a>
+    // 2- OptimisedFizzBuzz.js <a href="./fizzBuzzOptimised.js">Click here</a>
+                </pre>
+            </div>
+        </main>
+        <footer class="p-3">
+            <p class="d-block text-center text-white">Next: 
+                <a class="text-white" href="./../02-RequiringDir/index.html">Go to 02 - Requiring_Directory</a></p>
+        </footer>
+        <script>    
+        </script>
+    </body>
+</html>
