@@ -1,8 +1,13 @@
-const math = require('./Math');
+const { square, add, PI } = require('./Math');
 
-console.log(math.square(19));
-console.log(math.add(19, 19));
-console.log(math.PI);
+// console.log(math.square(19));
+// console.log(math.add(19, 19));
+// console.log(math.PI);
+
+console.log(square(19));
+console.log(add(19, 19));
+console.log(PI);
+
 
 //Destructuring an object
 const person = {
