@@ -1,0 +1,14 @@
+{
+  "name": "05-path_params",
+  "version": "1.0.0",
+  "description": "Subreddit-demo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sidharth Pandey",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
