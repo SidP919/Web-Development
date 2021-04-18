@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+
+    <h2>BLOG</h2>
+    <h3>Title: <%= Blog.name %></h5>
+    <img src="<%= Blog.img %>" alt="blog-image">
+    <h4>Author: <%= Blog.author %></p>
+    <p>Blog Content: <%= Blog.text %></p>
+    <hr>
+    <h2>To-Do_List</h2>
+    <ul>
+        <% for(let item of Todo){%>
+        <li><%= item%></li>
+        <%}%>
+    </ul>
+
+<%- include("partials/footer") %>
