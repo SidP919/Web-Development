@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+</head>
+<body>
+    <h1>Comments</h1>
+    <ul>
+        <% for(let c of Comments){%>
+        <li><%=c.body.substring(0,20)%><% if(c.body.length>20){%>...<%}%>  
+        - <strong><%=c.username%></strong></li>
+        <a href="/comments/<%=c.id%>">Show details</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/comments/<%=c.id%>/edit">Edit Comment</a>
+        <form action="/comments/<%= c.id %>?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+        <br><br>
+        <%}%>
+    </ul>
+    <a href="/comments/new">Add New Comment</a>
+</body>
+</html>
