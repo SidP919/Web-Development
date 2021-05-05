@@ -1,0 +1,86 @@
+body{
+    min-width: 360px;
+}
+
+.bg-grey,.show-main,main{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl3p-eVw9TkyBJSkBNhSnYzUMSm-ehVsAbOA&usqp=CAU');
+    margin-top: 5%;
+    width: 90%;
+}
+
+/* Media Queries */
+/* // Large devices (desktops, more than 1200px) */
+@media (min-width: 1199.98px) { 
+    .bg-grey,.show-main,main{
+        margin-top: 5%;
+    }
+ }
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    .bg-grey,.show-main,main{
+        margin-top: 7%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-size: x-large;    
+        margin-bottom: .1rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+    }
+ }
+
+ /* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    *{
+        font-size:x-large;
+    }
+    .bg-grey,.show-main,main{
+        margin-top: 9%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-size: large;    
+        margin-bottom: .1rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+    }
+ }
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    *{
+        font-size: x-large;
+    }
+    .bg-grey,.show-main,main{
+        margin-top: 13%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-size: larger;    
+        margin-bottom: .1rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+    }
+ }
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    *{
+        font-size: large;
+    }
+    .bg-grey,.show-main,main{
+        margin-top: 16%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-size: small;    
+        margin-bottom: .1rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+    }
+ }
