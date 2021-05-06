@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+
 // //get seed function from seed.js(but only
 // //during the first execution of seed function)
 // const seedDB = require('./seed');
@@ -22,8 +23,20 @@ app.use(express.static(path.join(__dirname,'/public')));
 // request, we use below middleware:
 app.use(express.urlencoded({extended:true}));
 
+// To send a PATCH request, we will need to
+// override the POST method using 
+// method-override npm package and 
+// below written middleware:
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 //make a connection to mongodb
-mongoose.connect('mongodb://localhost/bloggingWebApp', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost/bloggingWebApp', 
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify:false
+    })
 .then(()=>{
     console.log('MongoDB Connected.')
 })
@@ -102,12 +115,30 @@ app.get('/blogs/:id', async(req,res)=>{
     res.render('show',{Blog:blog});
 });
 
+// "Show Edit Blog form" GET route:
+app.get('/blogs/:id/edit', async(req,res)=>{
+    const { id } = req.params;
+    const blog = await Blog.findById(id);
+    res.render('edit',{blog});
+});
 
+//"Update the edited blog to db" using below PATCH route:
+app.patch('/blogs/:id', async(req,res)=>{
+    const { id } = req.params;
+    const updatedBlog = req.body;
+    
+    await Blog.findByIdAndUpdate(id, updatedBlog);//find 
+    //Blog with id and replace with updatedBlog
+    
+    res.redirect(`/blogs/${id}`);
+});
 
-
-
-
-
+//"Delete the current Blog from DB" using below DELETE Route:
+app.delete('/blogs/:id', async(req,res)=>{
+    const {id} = req.params;
+    await Blog.findByIdAndDelete(id);
+    res.redirect('/blogs');
+})
 
 
 
