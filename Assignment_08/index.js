@@ -3,8 +3,9 @@ const app = express();
 const path = require('path');
 
 
-// //get seed function from seed.js(but only
-// //during the first execution of seed function)
+// //get seed function from seed.js(but seed function
+// // is executed only once, when the DB is completely empty,
+// // after that we comment the below line):- 
 // const seedDB = require('./seed');
 
 //mongoose is used to utilize mongodb in the project
@@ -30,6 +31,9 @@ app.use(express.urlencoded({extended:true}));
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
+//import Blog Model from models/blog.js:
+const Blog = require('./models/blog');
+
 //make a connection to mongodb
 mongoose.connect('mongodb://localhost/bloggingWebApp', 
     {
@@ -45,35 +49,10 @@ mongoose.connect('mongodb://localhost/bloggingWebApp',
     console.log(err);
 });
 
-//For defining the MongoDB Schema for our bloggingWebApp:
-const blogSchema = new mongoose.Schema({
-    blogTitle:{
-        type:String,
-        required: true,
-        maxlength: 100
-    },
-    blogAuthor:{
-        type:String,
-        required:true,
-        maxlength: 30
-    },
-    blogPublishDate:{
-        type: Date, 
-        default: Date.now
-    },
-    blogImage:{
-        type:String,
-        required:true,
-        default: "https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGJsb2d8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-    },
-    blogContent:{
-        type:String,
-        required:true
-    }
-});
+//For BlogSchema and Blog Model for our bloggingWebApp:
+// check Assignment_08/models/blog.js
 
-//Create a Model Blog for our blogs
-const Blog = mongoose.model('Blogs', blogSchema);
+
 
 // //execute seed function from seed.js here in
 // //index.js but we only execute it for
@@ -82,77 +61,12 @@ const Blog = mongoose.model('Blogs', blogSchema);
 // //comment the below line of code once the DB is seeded:
 // seedDB();
 
-//Home route
-app.get('/blogs', async(req,res)=>{
-    const blogsArr = await Blog.find({});
-    res.render('index',{blogs:blogsArr});
-});
+// For Blog related route, check ./routes/blog_route.js
+//
+// import blog routes from blog_route.js:-
+const blogRoutes = require('./routes/blog_route');
+app.use(blogRoutes);
 
-//redirect to home route
-app.get('/', (req,res)=>{
-    res.redirect('/blogs');
-});
-
-//Go to "create new blog form" route
-app.get('/blogs/new', (req,res)=>{
-    res.render('new');
-});
-
-//"Add the new blog to db" using below POST route:
-app.post('/blogs', async(req, res)=>{
-    const blog = req.body;
-    if(blog.blogImage === ''){
-        blog.blogImage = "https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGJsb2d8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
-    }
-    await Blog.create(blog);
-    res.redirect('/blogs');
-});
-
-//"Show more details about a blog" route:
-app.get('/blogs/:id', async(req,res)=>{
-    const { id } = req.params;
-    const blog = await Blog.findById(id);
-    res.render('show',{Blog:blog});
-});
-
-// "Show Edit Blog form" GET route:
-app.get('/blogs/:id/edit', async(req,res)=>{
-    const { id } = req.params;
-    const blog = await Blog.findById(id);
-    res.render('edit',{blog});
-});
-
-//"Update the edited blog to db" using below PATCH route:
-app.patch('/blogs/:id', async(req,res)=>{
-    const { id } = req.params;
-    const updatedBlog = req.body;
-    
-    await Blog.findByIdAndUpdate(id, updatedBlog);//find 
-    //Blog with id and replace with updatedBlog
-    
-    res.redirect(`/blogs/${id}`);
-});
-
-//"Delete the current Blog from DB" using below DELETE Route:
-app.delete('/blogs/:id', async(req,res)=>{
-    const {id} = req.params;
-    await Blog.findByIdAndDelete(id);
-    res.redirect('/blogs');
-})
-
-
-
-
-
-//privacy policy
-app.get('/privacy_policy', (req,res)=>{
-    res.render('privacy_policy');
-});
-
-//terms and conditions
-app.get('/terms_and_conditions', (req,res)=>{
-    res.render('terms_and_conditions');
-});
 
 app.listen(3000,()=>{
     console.log('Server running at port 3000...');
