@@ -20,6 +20,8 @@ Completion Status - In Progress
   6> Assignment-06 - To-Do-List App - https://sidp919.github.io/Web-Development/Assignment_06/index.html
   
   7> Assignment-07 - Weather Web App - https://sidp919.github.io/Web-Development/Assignment_07/index.html
+
+  8> Assignment-08 - BloG-It-NoW App - https://github.com/SidP919/Web-Development/tree/master/Assignment_08#readme
 #
 
 Developed By:
