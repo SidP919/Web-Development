@@ -23,7 +23,7 @@ npm packages used:
 # Now to understand on how to use and work with the above technologies, follow below instructions:
 
 1.  Firstly, please copy/download all the folders and files under
-    https://github.com/SidP919/Web-Development/tree/master/Lecture_14/03-BloG-It-NoW_App
+    https://github.com/SidP919/Web-Development/blob/master/Assignment_08
     and paste/move it to your local project directory/folder.
 
 
