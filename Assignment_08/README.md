@@ -53,4 +53,14 @@ npm packages used:
 4.  For Application Flow: Check index.js file [here](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/index.js)
 
 #
+
+# Screenshots of BloG-It-Now Web Application:
+
+![blog-app-img-01](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/images/screenshot_01.png)
+
+
+![blog-app-img-01](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/images/screenshot_02.png)
+
+
+![blog-app-img-01](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/images/screenshot_03.png)
 #

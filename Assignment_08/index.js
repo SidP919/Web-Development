@@ -35,7 +35,7 @@ app.use(methodOverride('_method'));
 const Blog = require('./models/blog');
 
 //make a connection to mongodb
-mongoose.connect('mongodb://localhost/bloggingWebApp', 
+mongoose.connect('mongodb://localhost:27017/bloggingWebApp', 
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -50,7 +50,7 @@ mongoose.connect('mongodb://localhost/bloggingWebApp',
 });
 
 //For BlogSchema and Blog Model for our bloggingWebApp:
-// check Assignment_08/models/blog.js
+// check ./models/blog.js
 
 
 
@@ -67,7 +67,16 @@ mongoose.connect('mongodb://localhost/bloggingWebApp',
 const blogRoutes = require('./routes/blog_route');
 app.use(blogRoutes);
 
+const otherRoutes = require('./routes/other_routes');
+app.use(otherRoutes);
 
+
+
+
+
+
+
+//local server setup:
 app.listen(3000,()=>{
     console.log('Server running at port 3000...');
 });
