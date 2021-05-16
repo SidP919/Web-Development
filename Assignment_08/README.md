@@ -56,11 +56,60 @@ npm packages used:
 
 # Screenshots of BloG-It-Now Web Application:
 
-![blog-app-img-01](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/images/screenshot_01.png)
+
+Home page Screenshots:-
 
 
-![blog-app-img-01](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/images/screenshot_02.png)
+![blog-app-img-01](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_01.png)
 
 
-![blog-app-img-01](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/images/screenshot_03.png)
+![blog-app-img-02](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_02.png)
+
+
+![blog-app-img-03](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_03.png)
+
+
+
+
+Create New Blog page Screenshot:-
+
+
+![blog-app-img-04](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_04.png)
+
+
+
+
+Privacy Policy page Screenshots:-
+
+
+![blog-app-img-05](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_05.png)
+
+
+![blog-app-img-06](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_06.png)
+
+
+
+
+Terms & Conditions page Screenshots:-
+
+
+![blog-app-img-07](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_07.png)
+
+
+![blog-app-img-08](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_08.png)
+
+
+
+
+Show more about a Blog page Screenshots:-
+
+
+![blog-app-img-09](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_09.png)
+
+
+![blog-app-img-10](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_10.png)
+
 #
+
+Thanks,
+Sidharth
