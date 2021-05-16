@@ -23,7 +23,7 @@
                 <h6 class="p-1 m-1">Published by <%= b.blogAuthor %> on <%= b.blogPublishDate %></h6>
                 <div class="row">
                   <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                    <img class="p-1 w-75 my-3 img-thumbnail rounded-3" src="<%= b.blogImage %>" alt="blog_image">
+                    <img class="p-1 m-2 w-100 my-3 img-thumbnail rounded-3 all-blogs-img" src="<%= b.blogImage %>" alt="blog_image">
                   </div>
                   <div class="col-lg-6 col-md-12 col-sm-12">
                     <p class="p-1 m-1 text-white"><%= b.blogContent.substring(0,500)%><% if(b.blogContent.length>300){%>...<%}%>&nbsp;<a href="/blogs/<%= b._id %> ">Show more</a></p>

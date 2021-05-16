@@ -18,13 +18,21 @@ router.get('/blogs/new', (req,res)=>{
     res.render('new');
 });
 
+//Before we create a new blog or be able to edit any blog,
+//We need to validate the form filled by user and
+//only if it passes all criterion, we allow the submission:
+const { validateForm } = require('../public/js/server_side');
+
 //"Add the new blog to db" using below POST route:
 router.post('/blogs', async(req, res)=>{
-    const blog = req.body;
-    if(blog.blogImage === ''){
-        blog.blogImage = "https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGJsb2d8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
+    const blog = req.body.blog;
+    const validatedBlog = validateForm(blog);
+
+    if(validatedBlog !== null){
+        //Create a new Blog with validatedBlog object:
+        await Blog.create(validatedBlog);
     }
-    await Blog.create(blog);
+
     res.redirect('/blogs');
 });
 
@@ -45,10 +53,13 @@ router.get('/blogs/:id/edit', async(req,res)=>{
 //"Update the edited blog in DB" using below PATCH route:
 router.patch('/blogs/:id', async(req,res)=>{
     const { id } = req.params;
-    const updatedBlog = req.body;
+    const updatedBlog = req.body.updatedBlog;
+    const validatedBlog = validateForm(updatedBlog);
     
-    //find Blog with the id and replace it with updatedBlog:
-    await Blog.findByIdAndUpdate(id, updatedBlog);
+    if(validatedBlog !== null){
+        //find Blog with the id and replace it with updatedBlog:
+        await Blog.findByIdAndUpdate(id, validatedBlog);
+    }
     
     res.redirect(`/blogs/${id}`);
 });

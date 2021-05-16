@@ -4,9 +4,12 @@ body{
 
 .bg-grey,main{
     background-image: url('./../images/bg_img.jpg');
-    /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl3p-eVw9TkyBJSkBNhSnYzUMSm-ehVsAbOA&usqp=CAU'); */
     margin-top: 5%;
     width: 90%;
+}
+
+.all-blogs-img{
+    max-height: 300px;
 }
 
 /* Media Queries */
@@ -14,7 +17,7 @@ body{
 @media (min-width: 1199.98px) { 
     .show-img{
         width: 75vw!important;
-        height: 300px;
+        height: 400px;
     }
 
     .bg-grey,.show-main,main{
