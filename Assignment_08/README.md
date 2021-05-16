@@ -18,7 +18,7 @@ npm packages used:
     "nodemon": "^2.0.7"
 
 #
-#
+
 
 # Now to understand on how to use and work with the above technologies, follow below instructions:
 
@@ -37,6 +37,7 @@ npm packages used:
 
 
 3.  How to run this code:
+
     1> Make sure MongoDB is running on your system(use command: mongod)
 
     2> Open another window of command line 
@@ -68,6 +69,7 @@ Home page Screenshots:-
 
 ![blog-app-img-03](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_03.png)
 
+#
 
 
 
@@ -76,6 +78,7 @@ Create New Blog page Screenshot:-
 
 ![blog-app-img-04](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_04.png)
 
+#
 
 
 
@@ -87,6 +90,7 @@ Privacy Policy page Screenshots:-
 
 ![blog-app-img-06](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_06.png)
 
+#
 
 
 
@@ -98,6 +102,7 @@ Terms & Conditions page Screenshots:-
 
 ![blog-app-img-08](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_08.png)
 
+#
 
 
 
@@ -111,5 +116,12 @@ Show more about a Blog page Screenshots:-
 
 #
 
-Thanks,
-Sidharth
+
+Developed By:
+
+Sidharth Pandey
+
+(Sidp0008@gmail.com)
+
+
+Happy Learning! ☺️
