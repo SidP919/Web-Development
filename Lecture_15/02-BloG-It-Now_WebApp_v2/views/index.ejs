@@ -14,23 +14,25 @@
 </head>
 <body class="container-fluid bg-primary p-2">
     <%- include("partials/header") %> 
-    <main class="container-fluid p-3 rounded">
-        <h1 class="p-1 text-white d-inline m-1"><strong class="bg-dark display-3 bg-dark align-middle rounded">&nbsp;&nbsp;BloG-It-NoW&nbsp;&nbsp;</strong></h1>
-        <div class="mt-3 p-1">
-            <% for(let b of blogs){ %> 
-            <div class="bg-dark text-info p-2 mb-3 rounded">
-                <h3 class="p-1 m-1"><u><%= b.blogTitle %></u></h3>
-                <h6 class="p-1 m-1">Published by <%= b.blogAuthor %> on <%= b.blogPublishDate %></h6>
-                <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                    <img class="p-1 w-75 my-3 img-thumbnail rounded-3" src="<%= b.blogImage %>" alt="blog_image">
-                  </div>
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                    <p class="p-1 m-1 text-white"><%= b.blogContent.substring(0,500)%><% if(b.blogContent.length>300){%>...<%}%>&nbsp;<a href="/blogs/<%= b._id %> ">Show more</a></p>
-                  </div>
+    <main class="container-fluid p-1 rounded">
+        <div class="container-fluid my-3">
+            <h1 class="p-1 my-2 text-white"><strong class="bg-dark rounded">&nbsp;&nbsp;BloG-It-NoW&nbsp;&nbsp;</strong></h1>
+            <div class="container-fluid p-1">
+                <% for(let b of blogs){ %> 
+                <div class="bg-dark text-info py-2 px-1 mb-3 rounded">
+                    <h3 class="p-1 m-1"><u><%= b.blogTitle %></u></h3>
+                    <h6 class="p-1 m-1">Published by <%= b.blogAuthor %> on <%= b.blogPublishDate %></h6>
+                    <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+                        <img class="p-1 m-2 my-3 img-thumbnail rounded-3 all-blogs-img" src="<%= b.blogImage %>" alt="blog_image">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <p class="p-1 m-1 text-white"><%= b.blogContent.substring(0,500)%><% if(b.blogContent.length>300){%>...<%}%>&nbsp;<a href="/blogs/<%= b._id %> ">Show more</a></p>
+                    </div>
+                    </div>
                 </div>
+                <% } %> 
             </div>
-            <% } %> 
         </div>
     </main>
     <%- include("partials/footer") %> 

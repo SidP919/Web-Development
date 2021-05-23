@@ -4,30 +4,35 @@ body{
 
 .bg-grey,main{
     background-image: url('./../images/bg_img.jpg');
-    /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl3p-eVw9TkyBJSkBNhSnYzUMSm-ehVsAbOA&usqp=CAU'); */
     margin-top: 5%;
     width: 90%;
 }
 
+.all-blogs-img{
+    width: 90%!important;
+    max-height: 300px;
+}
+
+.show-img{
+    width: 75%!important;
+    height: 400px;
+}
+
 /* Media Queries */
 /* // Large devices (desktops, more than 1200px) */
-@media (min-width: 1199.98px) { 
-    .show-img{
-        width: 75vw!important;
-        height: 300px;
-    }
+@media (min-width: 1199.98px) {
 
     .bg-grey,.show-main,main{
         margin-top: 5%;
     }
- }
+}
 
 /* // Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
     .bg-grey,.show-main,main{
         margin-top: 7%;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h2, h3, h4, h5, h6 {
         font-size: x-large;    
         margin-bottom: .1rem;
         font-family: inherit;
@@ -53,20 +58,22 @@ body{
         font-weight: 500;
         line-height: 1.2;
         color: inherit;
-    }
-
-    
- }
+    }    
+}
 
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
+    .show-img{
+        width: 75%!important;
+        height: 200px;
+    }
     p{
         font-size: large;
     }
     .bg-grey,.show-main,main{
         margin-top: 13%;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h2, h3, h4, h5, h6 {
         font-size: larger;    
         margin-bottom: .1rem;
         font-family: inherit;
@@ -84,7 +91,7 @@ body{
     .bg-grey,.show-main,main{
         margin-top: 16%;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h2, h3, h4, h5, h6 {
         font-size: large;    
         margin-bottom: .1rem;
         font-family: inherit;
@@ -92,4 +99,4 @@ body{
         line-height: 1.2;
         color: inherit;
     }
- }
+}

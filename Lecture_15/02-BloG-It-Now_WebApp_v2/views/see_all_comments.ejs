@@ -17,22 +17,6 @@
     <main class="container-fluid p-2 rounded show-main">
         <h1 class="p-1 my-2 text-white"><strong class="bg-dark rounded">&nbsp;&nbsp;BloG-It-NoW&nbsp;&nbsp;</strong></h1>
         <div class="bg-dark text-info py-2 px-1 mb-3 rounded">
-            <div>
-                <h3 class="p-1 m-1"><u><%= Blog.blogTitle %></u></h3>
-                <h6 class="p-1 m-1">Published by <%= Blog.blogAuthor %> on <%= Blog.blogPublishDate %></h6>
-                <div class="text-center p-2 my-2 mx-auto">
-                    <img class="p-1 w-75 img-thumbnail show-img rounded" src="<%= Blog.blogImage %>" alt="blog_image">
-                </div>
-                <p class="p-2 my-2 mx-auto text-white"><%= Blog.blogContent%></p>
-                <div class="container text-center">
-                  <a class="text-center align-middle rounded px-4 py-2 m-2 btn btn-secondary text-white" href="/blogs/<%= Blog._id %>/edit">Edit Blog</a>
-                  <form class="d-inline" action="/blogs/<%= Blog._id %>?_method=DELETE" method="POST">
-                    <button class="text-center align-middle rounded px-4 py-2 m-2 btn btn-secondary text-white">Delete Blog</button>
-                  </form>
-                </div>
-            </div>
-        </div>
-        <div class="bg-dark text-info py-2 px-1 mb-3 rounded">
             <div class="col-md-11 col-sm-11 col-lg-8 ">
                 <h3 class="text-primary px-2 py-2">Please provide your review/comments below:</h3>
                 <form class="my-1 mx-1 align-start form-validate" action="/blogs/<%=Blog._id%>/review" 
@@ -66,27 +50,17 @@
                 </form>
             </div>
             <div class="col-md-11 col-sm-11 col-lg-8 px-1 pt-3">
-                <h2 class="text-primary px-2 py-1"><u>Recent Comments on this blog: </u></h2>
+                <h2 class="text-primary px-2 py-1"><u>All comments for this blog: </u></h2>
                 <div class="w-100 px-2 py-2">
                     <% 
                     Reviews.reverse();
-                    let count = 0; 
                     for(let r of Reviews){
-                        count++;
-                        if(count<11){
                     %>
                             <div class="text-white px-2 py-2 my-2 border border-white rounded-3">
                                 <h4 class="m-1"><%=r.reviewAuthor%></h4>
                                 <h5 class="m-1"><strong>Rated: </strong><%=r.reviewRating%> stars</h5>
                                 <p class="m-1"><strong>Commented: </strong><%=r.reviewComment%></p>
                             </div>
-                    <%  
-                        }
-                    }
-                    if(Reviews.length > 9){
-                    %>
-                        <h4 class="text-center"><a class="text-primary" href="/blogs/<%=Blog._id%>/see_all_comments"
-                             target="_blank" role="button">See all comments</a></h4>
                     <%
                     }
                     %>

@@ -18,13 +18,21 @@ router.get('/blogs/new', (req,res)=>{
     res.render('new');
 });
 
+//Before we create a new blog or be able to edit any blog,
+//We need to validate the form filled by user and
+//only if it passes all criterion, we allow the submission:
+const { validateForm } = require('../public/js/server_side');
+
 //"Add the new blog to db" using below POST route:
 router.post('/blogs', async(req, res)=>{
-    const blog = req.body;
-    if(blog.blogImage === ''){
-        blog.blogImage = "https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGJsb2d8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
+    const blog = req.body.blog;
+    const validatedBlog = validateForm(blog);
+
+    if(validatedBlog !== null){
+        //Create a new Blog with validatedBlog object:
+        await Blog.create(validatedBlog);
     }
-    await Blog.create(blog);
+
     res.redirect('/blogs');
 });
 
@@ -32,7 +40,13 @@ router.post('/blogs', async(req, res)=>{
 router.get('/blogs/:id', async(req,res)=>{
     const { id } = req.params;
     const blog = await Blog.findById(id);
-    res.render('show',{Blog:blog});
+    //get all reviews
+    const reviewsArr = [];
+    if(blog.blogReviews.length > 0)
+    for(let reviewId of blog.blogReviews){
+        reviewsArr.push(await Review.findById(reviewId));
+    }
+    res.render('show',{Blog:blog, Reviews:reviewsArr});
 });
 
 // "Show Edit Blog form" using below GET route:
@@ -45,10 +59,13 @@ router.get('/blogs/:id/edit', async(req,res)=>{
 //"Update the edited blog in DB" using below PATCH route:
 router.patch('/blogs/:id', async(req,res)=>{
     const { id } = req.params;
-    const updatedBlog = req.body;
+    const updatedBlog = req.body.updatedBlog;
+    const validatedBlog = validateForm(updatedBlog);
     
-    //find Blog with the id and replace it with updatedBlog:
-    await Blog.findByIdAndUpdate(id, updatedBlog);
+    if(validatedBlog !== null){
+        //find Blog with the id and replace it with updatedBlog:
+        await Blog.findByIdAndUpdate(id, validatedBlog);
+    }
     
     res.redirect(`/blogs/${id}`);
 });
@@ -59,6 +76,48 @@ router.delete('/blogs/:id', async(req,res)=>{
     await Blog.findByIdAndDelete(id);
     res.redirect('/blogs');
 });
+
+
+// Review_Routes:
+//// import Review Model from models folder:
+const Review = require('./../models/reviews');
+
+//// below is the POST route to post a comment:
+router.post('/blogs/:id/review', async(req,res)=>{
+    const id = req.params.id;
+    const review = new Review(req.body.review);
+    if(review.reviewAuthor === undefined || review.reviewAuthor === ''){
+        review.reviewAuthor = "Anonymous"; //default reviewer name is Anonymous
+    }
+    
+    //get current blog and push the review into its blogReviews Array:
+    const blog = await Blog.findById(id);
+    blog.blogReviews.push(review);
+
+    //save the review to Reviews collection:
+    await review.save();
+    //save the blog with its updated Reviews array:
+    await blog.save();
+
+    //refresh the current blog page:
+    res.redirect(`/blogs/${id}`);
+});
+
+// below is the route to view all comments:
+router.get('/blogs/:id/see_all_comments', async(req,res)=>{
+
+    const { id } = req.params;
+    const blog = await Blog.findById(id);
+    //get all reviews
+    const reviewsArr = [];
+    if(blog.blogReviews.length > 0)
+    for(let reviewId of blog.blogReviews){
+        reviewsArr.push(await Review.findById(reviewId));
+    }
+    res.render('see_all_comments', {Blog:blog, Reviews:reviewsArr});
+
+});
+
 
 // export all the Blog related routes:-
 module.exports = router;
