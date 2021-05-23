@@ -24,7 +24,13 @@ const blogSchema = new mongoose.Schema({
     blogContent:{
         type:String,
         required:true
-    }
+    },
+    blogReviews:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Review'
+        }
+    ]
 });
 
 //Create a Blog Model for our blogs:

@@ -40,7 +40,13 @@ router.post('/blogs', async(req, res)=>{
 router.get('/blogs/:id', async(req,res)=>{
     const { id } = req.params;
     const blog = await Blog.findById(id);
-    res.render('show',{Blog:blog});
+    //get all reviews
+    const reviewsArr = [];
+    if(blog.blogReviews.length > 0)
+    for(let reviewId of blog.blogReviews){
+        reviewsArr.push(await Review.findById(reviewId));
+    }
+    res.render('show',{Blog:blog, Reviews:reviewsArr});
 });
 
 // "Show Edit Blog form" using below GET route:
@@ -70,6 +76,48 @@ router.delete('/blogs/:id', async(req,res)=>{
     await Blog.findByIdAndDelete(id);
     res.redirect('/blogs');
 });
+
+
+// Review_Routes:
+//// import Review Model from models folder:
+const Review = require('./../models/reviews');
+
+//// below is the POST route to post a comment:
+router.post('/blogs/:id/review', async(req,res)=>{
+    const id = req.params.id;
+    const review = new Review(req.body.review);
+    if(review.reviewAuthor === undefined || review.reviewAuthor === ''){
+        review.reviewAuthor = "Anonymous"; //default reviewer name is Anonymous
+    }
+    
+    //get current blog and push the review into its blogReviews Array:
+    const blog = await Blog.findById(id);
+    blog.blogReviews.push(review);
+
+    //save the review to Reviews collection:
+    await review.save();
+    //save the blog with its updated Reviews array:
+    await blog.save();
+
+    //refresh the current blog page:
+    res.redirect(`/blogs/${id}`);
+});
+
+// below is the route to view all comments:
+router.get('/blogs/:id/see_all_comments', async(req,res)=>{
+
+    const { id } = req.params;
+    const blog = await Blog.findById(id);
+    //get all reviews
+    const reviewsArr = [];
+    if(blog.blogReviews.length > 0)
+    for(let reviewId of blog.blogReviews){
+        reviewsArr.push(await Review.findById(reviewId));
+    }
+    res.render('see_all_comments', {Blog:blog, Reviews:reviewsArr});
+
+});
+
 
 // export all the Blog related routes:-
 module.exports = router;

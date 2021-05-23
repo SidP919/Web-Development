@@ -58,7 +58,7 @@ npm packages used:
 # Screenshots of BloG-It-Now Web Application:
 
 
-Home page Screenshots:-
+Home-page Screenshots:-
 
 
 ![blog-app-img-01](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_01.png)
@@ -73,7 +73,51 @@ Home page Screenshots:-
 
 
 
-Create New Blog page Screenshot:-
+Show_more_about_a_Blog_page_Screenshots:-
+
+
+![blog-app-img-09](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_09.png)
+
+
+![blog-app-img-10](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_10.png)
+
+#
+
+
+
+Post your comment on Show_more_about_a_Blog_page Screenshot:-
+
+
+![blog-app-img-14](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_14.png)
+
+#
+
+
+
+See 10 latest comments on a blog on Show_more_about_a_Blog_page Screenshots:-
+
+
+![blog-app-img-15](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_15.png)
+
+
+![blog-app-img-16](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_16.png)
+
+#
+
+
+
+See all comments on a blog on see_all_comments_page Screenshots:-
+
+
+![blog-app-img-17](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_17.png)
+
+
+![blog-app-img-18](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_18.png)
+
+#
+
+
+Create_New_Blog-page Screenshot:-
 
 
 ![blog-app-img-04](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_04.png)
@@ -82,7 +126,28 @@ Create New Blog page Screenshot:-
 
 
 
-Privacy Policy page Screenshots:-
+Edit_and_Update_a_Blog-page Screenshot:-
+
+
+![blog-app-img-13](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_13.png)
+
+#
+
+
+
+Client-Side_&_Server-Side_Validation on Create_New-page and Edit_Update-page Screenshot:-
+
+![blog-app-img-11](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_11.png)
+
+
+![blog-app-img-12](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_12.png)
+
+#
+
+
+
+
+Privacy_Policy-page Screenshots:-
 
 
 ![blog-app-img-05](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_05.png)
@@ -94,7 +159,7 @@ Privacy Policy page Screenshots:-
 
 
 
-Terms & Conditions page Screenshots:-
+Terms_&_Conditions-page Screenshots:-
 
 
 ![blog-app-img-07](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_07.png)
@@ -104,17 +169,6 @@ Terms & Conditions page Screenshots:-
 
 #
 
-
-
-Show more about a Blog page Screenshots:-
-
-
-![blog-app-img-09](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_09.png)
-
-
-![blog-app-img-10](https://github.com/SidP919/Web-Development/blob/master/Assignment_08/public/images/screenshot_10.png)
-
-#
 
 
 Developed By:

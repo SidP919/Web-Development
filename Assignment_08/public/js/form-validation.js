@@ -1,3 +1,4 @@
+//Below code is taken from here: https://getbootstrap.com/docs/5.0/forms/validation/#custom-styles
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
     'use strict'
@@ -18,3 +19,13 @@
         }, false)
       })
   })()
+  
+  // On an another note, above is a good example of iife(imediately invoked function expression)
+  // It has the syntax: 
+  // ()()
+  // OR
+  // ( 
+  //    function body comes here 
+  // )( 
+  //      arguments are defined here 
+  // )
