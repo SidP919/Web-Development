@@ -1,18 +1,23 @@
 # Angular
-#
 
-# Prerequisites
+
+## Prerequisites
 Ensure node.js and npm is already install and available in current directory.
 
 confirm it using: 
 
-For Node.js : node --version
+For Node.js : 
+    
+    node --version
 
-For npm : npm --version
+For npm : 
+    
+    npm --version
 
 #
 
-# Initial Instructions
+
+## Initial Instructions
 1> Download and install Angular with below command:
     
     npm install -g @angular/cli
@@ -41,27 +46,27 @@ ng: File C:\Users\admin\AppData\Roaming\npm\ng.ps1 cannot be loaded because runn
 
 Then, run below commands first before executing step 3 again:
 
-set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-Get-ExecutionPolicy
+    Get-ExecutionPolicy
 
-Get-ExecutionPolicy -list
+    Get-ExecutionPolicy -list
 
 
 OUTPUT should be below:
 
-        Scope ExecutionPolicy
-        ----- ---------------
+        Scope           ExecutionPolicy
+        -----           ---------------
 
-MachinePolicy       Undefined
+        MachinePolicy    Undefined
 
-   UserPolicy       Undefined
+        UserPolicy       Undefined
 
-      Process       Undefined
+        Process          Undefined
 
-  CurrentUser    RemoteSigned           //This line means now ng should work and we can go to step 3.
+        CurrentUser      RemoteSigned           //This line means now ng should work and we can go to step 3.
 
- LocalMachine       Undefined
+        LocalMachine     Undefined
 
 
 #
