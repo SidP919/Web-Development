@@ -32,6 +32,26 @@ NPM Packages required to be downloaded and setup prior to working on this applic
 
 #
 
+Now, that we have our dependencies ready, we can make some changes in our app component. 
+
+Go to app.component.html file and make starting changes similar to what we done here in this commit: https://github.com/SidP919/Web-Development/commit/49823d1b65aa791e2dc8f8676a1cc56162c42f4f
+
+So, Now we have got a Header, Footer and a Main section for our to-do-list app. 
+Now, we will work on our Main section and add all the to-do-list functionality in this main section. 
+
+For this we will create new components under subComponents folder using below command:
+
+    ng generate component subComponents/{component-name}
+
+or 
+
+    ng g c subComponents/{component-name}
+
+For ex: ng g c subcomponents/to-do-list         //This to-do-list component will contain our list of todos.
+
+
+#
+
 
 ## Code scaffolding
 
