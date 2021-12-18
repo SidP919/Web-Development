@@ -1,0 +1,10 @@
+body{
+    min-width: 320px;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Main */
+main{
+    margin-top: 100px;
+}
