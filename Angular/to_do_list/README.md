@@ -53,6 +53,20 @@ After creating to-do-list component with above command, see the files that got c
 
 #
 
+Now, we will work on to-do-list component and make below changes:
+    1> Create models/Todo.ts
+    2> Make changes in to-do-list.component.ts
+    3> Then make changes in to-do-list.component.html
+    4> Now, run app at localhost:4200 to test your changes
+You can get the detailed changes by checking this commit: https://github.com/SidP919/Web-Development/commit/d0a445756ad87e330bd946ead2d503a5fc28af66
+
+
+#
+
+Now, we will create new component to-do-item to display individual item from to-do-list, and to create it we will use below command:
+    ng g c subComponents/to-do-item
+
+
 
 ## Code scaffolding
 
