@@ -49,6 +49,7 @@ or
 
 For ex: ng g c subcomponents/to-do-list         //This to-do-list component will contain our list of todos.
 
+After creating to-do-list component with above command, see the files that got created and changes happened in this commit: https://github.com/SidP919/Web-Development/commit/082a7f5d44d660531c5f8d37d15fde4ea45599a2
 
 #
 
