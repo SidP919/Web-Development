@@ -60,6 +60,8 @@ Now, we will work on to-do-list component and make below changes:
     4> Now, run app at localhost:4200 to test your changes
 You can get the detailed changes by checking this commit: https://github.com/SidP919/Web-Development/commit/d0a445756ad87e330bd946ead2d503a5fc28af66
 
+After this commit, app looks like below:
+![at_4th_commit](https://github.com/SidP919/Web-Development/blob/master/Angular/to_do_list/src/assets/images/app_screenshots/at_4th_commit.png)
 
 #
 
