@@ -30,7 +30,16 @@ NPM Packages required to be downloaded and setup prior to working on this applic
     
     a> run command: npm install jquery
 
+    b> Now, go to angular.json file inside application's root folder( ex. to_do_list folder)
+
+    c> In angular.json file, find object "architect" then traverse inside it and find "scripts" array.
+
+    d> In scripts array, add this string: "./node_modules/jquery/dist/jquery.js"
+
+    e> for reference, check https://github.com/SidP919/Web-Development/tree/master/Angular/to_do_list/angular.json file
+
 #
+
 
 Now, that we have our dependencies ready, we can make some changes in our app component. 
 
@@ -53,6 +62,7 @@ After creating to-do-list component with above command, see the files that got c
 
 #
 
+
 Now, we will work on to-do-list component and make below changes:
     1> Create models/Todo.ts
     2> Make changes in to-do-list.component.ts
@@ -61,12 +71,21 @@ Now, we will work on to-do-list component and make below changes:
 You can get the detailed changes by checking this commit: https://github.com/SidP919/Web-Development/commit/d0a445756ad87e330bd946ead2d503a5fc28af66
 
 After this commit, app looks like below:
+
 ![at_4th_commit](https://github.com/SidP919/Web-Development/blob/master/Angular/to_do_list/src/assets/images/app_screenshots/at_4th_commit.png)
 
 #
 
+
 Now, we will create new component to-do-item to display individual item from to-do-list, and to create it we will use below command:
     ng g c subComponents/to-do-item
+
+
+
+
+
+##
+
 
 
 
