@@ -1,1 +1,5 @@
-<p>to-do-list works!</p>
+<ul *ngFor="let todo of todosArr">
+    <li class="list-unstyled bg-danger d-inline p-2">
+        {{todo.srNo}} - {{todo.title}} - {{todo.desc}} - {{todo.active}}
+    </li>
+</ul>
