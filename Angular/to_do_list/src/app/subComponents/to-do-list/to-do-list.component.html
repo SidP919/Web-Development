@@ -1,5 +1,10 @@
-<ul *ngFor="let todo of todosArr">
-    <li class="list-unstyled bg-danger d-inline p-2">
-        {{todo.srNo}} - {{todo.title}} - {{todo.desc}} - {{todo.active}}
-    </li>
-</ul>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let todo of todosArr" class="col-lg-3 col-md-4 col-sm-4 col-6">
+            <app-to-do-item [toDoItem] = "todo"></app-to-do-item>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
