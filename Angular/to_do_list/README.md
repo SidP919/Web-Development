@@ -111,10 +111,30 @@ After this commit, app looks like below:
 #
 
 
+Now, we will add functionality to our delete button and make below changes:
+
+    1> First, make our UI even better than before by making changes same as in this commit: https://github.com/SidP919/Web-Development/commit/46d9b93dd651775038a5b4860c8bf186c8cce615
+
+    2> Now, make changes in to-do-item.component.html and make delete button image trigger event and send clicked toDoItem to onDelete() function in to-do-item.component.ts
+
+    3> Now, make changes in to-do-item.component.ts, and make onDelete() funciton emit the clicked toDoItem to to-do-list component
+
+    4> Now, make changes in to-do-list.component.html to receive toDoItem and send it to deleteTodo() function in to-do-list.component.ts filel.
+
+    5> Now, make changes in to-do-list.component.ts file and make deleteTodo() function delete the passed todo from todosArr array.
+
+You can get the detailed changes by checking this commit: https://github.com/SidP919/Web-Development/commit/426f00dee6b3f32a2915de9e62710daf60858d61
+
+
+After this commit, app looks almost same as before but now we are able to delete the TODOs from our list of TODOs.
+
+
 
 #
 
 
+
+#
 
 
 ## Code scaffolding
