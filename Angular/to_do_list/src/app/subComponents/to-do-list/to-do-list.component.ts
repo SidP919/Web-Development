@@ -47,4 +47,10 @@ export class ToDoListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Delete todo from todosArr:
+  deleteTodo(todo:Todo){
+    this.todosArr.splice(this.todosArr.indexOf(todo),1);
+    console.log(`ToDoItem: ${todo.title} has been deleted.`)
+  }
+
 }
