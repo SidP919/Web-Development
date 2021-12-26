@@ -126,12 +126,38 @@ Now, we will add functionality to our delete button and make below changes:
 You can get the detailed changes by checking this commit: https://github.com/SidP919/Web-Development/commit/426f00dee6b3f32a2915de9e62710daf60858d61
 
 
-After this commit, app looks almost same as before but now we are able to delete the TODOs from our list of TODOs.
-
+After this 6th commit, app looks almost same as before but now we are able to delete the TODOs from our list of TODOs.
 
 
 #
 
+
+Now, we create new component to add a TODO item to the list and make below changes:
+
+    1> Create new component add-to-do-item component using command:
+
+        ng g c subComponents/add-to-do-item
+    
+    2> Now, first make changes in add-to-do-item.component.html 
+        
+        so that it takes new task details from user and sends it to add-to-do-item.component.ts
+
+    3> Now, make changes in add-to-do-item.component.ts and emit the new todo to to-do-list.component.html
+    
+    4> Now, make changes in to-do-list.component.html 
+        
+        so that add-to-do-item component shows up on it 
+    
+        and it also send the received todo to to-do-list.component.ts file.
+
+    5> Now, in to-do-list.component.ts file, make changes to add the new todo to todosArr array.
+
+You can get the detailed changes by checking this 7th major commit: https://github.com/SidP919/Web-Development/commit/d562f576e0293c79562bb767ec438f2057cb8ac4
+
+
+After this commit, app looks like below:
+
+![at_7th_commit](https://github.com/SidP919/Web-Development/blob/master/Angular/to_do_list/src/assets/images/app_screenshots/at_7th_commit.png)
 
 
 #
