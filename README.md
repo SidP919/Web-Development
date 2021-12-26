@@ -1,5 +1,5 @@
 # Web-Development
-This repository showcases my journey to be a MERN-Full-Stack Web Developer. I have added all the code from the lectures I learned from and also the code for all the Projects I made during this journey. 
+This repository showcases my journey to be a Full-Stack Web Developer. I have added all the code from the lectures I learned from and also the code for all the Projects I made during this journey. 
 Please check out the Lectures and Assignments(Projects/Apps) I developed in action at https://sidp919.github.io/Web-Development/
 
 Completion Status - In Progress
@@ -22,6 +22,9 @@ Completion Status - In Progress
   7> Assignment-07 - Weather Web App - https://sidp919.github.io/Web-Development/Assignment_07/index.html
 
   8> Assignment-08 - BloG-It-NoW App - https://github.com/SidP919/Web-Development/tree/master/Assignment_08#readme
+  
+  9> Angular-Web-App - 01 - To-Do-List App - https://github.com/SidP919/Web-Development/tree/master/Angular/to_do_list#todolist
+
 #
 
 Developed By:
