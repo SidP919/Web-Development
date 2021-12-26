@@ -2,7 +2,9 @@
     <h4 class="d-inline-block form-control-sm">{{toDoItem.srNo}}-&nbsp;<u>{{toDoItem.title}}</u></h4>
     <p class="form-control-sm d-block">{{toDoItem.desc.substring(0,48)}}...</p>
     <div class="mb-1 d-block">
-        <img src="./../../../assets/images/tick_symbol.png" class="mx-2 my-1 d-inline-block" alt="Completed" />
-        <img src="./../../../assets/images/delete-item-icon-png.png" (click)="onDelete(toDoItem)" class="mx-2 ml-1 my-1 d-inline-block" alt="Delete" />
+        <div *ngIf="this.toDoItem.active;" class="mx-2 my-1 d-inline-block">
+            <img src="./../../../assets/images/tick_symbol.png" alt="Completed" data-toggle="tooltip" title="Mark as Completed" (click)="onComplete(toDoItem)"/>
+        </div>
+        <img src="./../../../assets/images/delete-item-icon-png.png" (click)="onDelete(toDoItem)" class="mx-2 ml-1 my-1 d-inline-block" alt="Delete" data-toggle="tooltip" title="Delete Task" />
     </div>
 </div>

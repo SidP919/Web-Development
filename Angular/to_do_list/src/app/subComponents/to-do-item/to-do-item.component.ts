@@ -14,6 +14,10 @@ export class ToDoItemComponent implements OnInit {
   @Output()
   todoDeleteEmitter: EventEmitter<Todo> = new EventEmitter();
 
+  //Create EventEmitter todoCompletedEmitter to emit objects of type Todo:
+  @Output()
+  todoCompletedEmitter: EventEmitter<Todo> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -26,6 +30,12 @@ export class ToDoItemComponent implements OnInit {
     //emit toDoItem of type Todo to to-do-list component:
     this.todoDeleteEmitter.emit(toDoItem);
 
+  }
+
+  //Emit toDoItem to to-do-list component to mark it as completed:
+  onComplete(toDoItem:Todo){
+    console.log("Mark as Completed is clicked.");
+    this.todoCompletedEmitter.emit(toDoItem);
   }
 
 }
