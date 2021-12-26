@@ -192,6 +192,25 @@ those TODOs don't vanish as now we are able to save the TODO List in localStorag
 
 #
 
+Now, we will add functionality to mark a TODO as completed, for this make changes in below files:
+
+    1> to-do-item.component.html
+
+    2> to-do-item.component.ts
+
+    3> to-do-list.component.html
+
+    4> to-do-list.component.ts
+
+You can get the detailed changes by checking this 10th major commit: https://github.com/SidP919/Web-Development/commit/bc55d60ca734f7aa519f418a5a52a29374084b3b#diff-c9fe3e5e31dfa7babdc364b9ae6ce5da0b19488421d4676e2527afa622e4341f
+
+After this commit, app looks like below:
+
+![at_10th_commit](https://github.com/SidP919/Web-Development/blob/master/Angular/to_do_list/src/assets/images/app_screenshots/at_10th_commit.png)
+
+
+#
+
 
 ## Code scaffolding
 
