@@ -53,4 +53,17 @@ export class ToDoListComponent implements OnInit {
     console.log(`ToDoItem: ${todo.title} has been deleted.`)
   }
 
+  //Add todo to todosArr:
+  addToDo(todo:Todo){
+
+    this.todosArr.push({
+      srNo: this.todosArr.length + 1,
+      title: todo.title,
+      desc: todo.desc,
+      active: true,
+    });
+    console.log(`ToDoItem: ${todo.title} has been added to TODO list.`);
+
+  }
+
 }

@@ -1,0 +1,15 @@
+<form class="mb-3 text-start border border-primary border-3 rounded-3" (ngSubmit)="onSubmit()">
+    <div class="mb-3 ms-4 pt-2">
+      <label for="taskTitle" class="text-primary"><h5> Title: </h5></label>
+      <input type="text" class="mx-2 border border-primary border-3 bg-white rounded-3 w-50 min-vw-50" 
+        placeholder="For ex. Study" id="taskTitle" name="taskTitle" [(ngModel)]="taskTitle">
+    </div>
+    <div class="mb-3 ms-4">
+        <label for="taskDescription" class="text-primary align-top"><h5>Task Description: </h5></label>
+        <textarea rows="4" cols="35" id="taskDescription" name="taskDescription"
+            class="d-block mx-2 border border-primary border-3 bg-white rounded-3 w-75 min-vw-75" [(ngModel)]="taskDescription">Description of task</textarea>
+    </div>
+    <div class="mb-3 ms-4">
+        <button type="submit" class="btn btn-primary px-5 mx-2">Add task</button>
+    </div>
+</form>

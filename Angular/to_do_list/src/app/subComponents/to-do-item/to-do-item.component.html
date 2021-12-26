@@ -1,6 +1,6 @@
-<div class="border border-white border-3 bg-primary rounded-3 mb-2 d-inline-block">
+<div class="border border-white border-3 bg-primary rounded-3 d-block h-100">
     <h4 class="d-inline-block form-control-sm">{{toDoItem.srNo}}-&nbsp;<u>{{toDoItem.title}}</u></h4>
-    <p class="form-control-sm d-block">{{toDoItem.desc.substring(0,64)}}...</p>
+    <p class="form-control-sm d-block">{{toDoItem.desc.substring(0,48)}}...</p>
     <div class="mb-1 d-block">
         <img src="./../../../assets/images/tick_symbol.png" class="mx-2 my-1 d-inline-block" alt="Completed" />
         <img src="./../../../assets/images/delete-item-icon-png.png" (click)="onDelete(toDoItem)" class="mx-2 ml-1 my-1 d-inline-block" alt="Delete" />
