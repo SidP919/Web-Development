@@ -163,6 +163,19 @@ After this commit, app looks like below:
 #
 
 
+Now, we will also add Form validation to our Add-To-Do form in add-to-do-item component:
+
+For this, we will make changes in add-to-do-item.component.html and add-to-do-item.component.ts file,
+
+You can get the detailed changes by checking this 8th major commit: https://github.com/SidP919/Web-Development/commit/10bdb380812e2434f691ec4c3ab5cccf7a5d9934
+
+After this commit, app looks like below:
+
+![at_8th_commit](https://github.com/SidP919/Web-Development/blob/master/Angular/to_do_list/src/assets/images/app_screenshots/at_8th_commit.png)
+
+
+#
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
