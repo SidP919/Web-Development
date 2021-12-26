@@ -176,6 +176,23 @@ After this commit, app looks like below:
 
 #
 
+
+Now, we will make changes in to-do-list.component.html and to-do-list.component.ts,
+
+    1> Make changes in to-do-list.component.html, use ngIf to render UI Elements based on conditions.
+
+    2> Make changes in to-do-list.component.ts, use localStorage to persist data during a session.
+
+You can get the detailed changes by checking this commit: https://github.com/SidP919/Web-Development/commit/7d92f6cfea3eedc0d241607f147f348509251309
+
+After this 9th commit, app looks almost same as before but now we don't have any dummy TODOs,
+our todosArr list is empty at start, now when we add new TODOs, even if we refresh the page,
+those TODOs don't vanish as now we are able to save the TODO List in localStorage.
+
+
+#
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
