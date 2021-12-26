@@ -8,40 +8,16 @@ import { Todo } from 'src/app/models/Todo';
 })
 export class ToDoListComponent implements OnInit {
 
-  todosArr: Todo[];
-  constructor() { 
-    this.todosArr = [
-      {
-        srNo: 1,
-        title: "First title",
-        desc: "description of first todo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus harum repellendus cupiditate commodi?",
-        active: true
-      },
-      {
-        srNo: 2,
-        title: "Second title",
-        desc: "description of second todo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus harum repellendus cupiditate commodi?",
-        active: true
-      },
-      {
-        srNo: 3,
-        title: "Third title",
-        desc: "description of third todo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus harum repellendus cupiditate commodi?",
-        active: true
-      },
-      {
-        srNo: 4,
-        title: "Fourth title",
-        desc: "description of fourth todo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus harum repellendus cupiditate commodi?",
-        active: true
-      },
-      {
-        srNo: 5,
-        title: "Fifth title",
-        desc: "description of fifth todo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus harum repellendus cupiditate commodi?",
-        active: true
-      }
-    ]
+  localItem:any = "";
+  todosArr: Todo[] = [];
+  constructor() {
+    this.localItem = localStorage.getItem("todosArrString");
+    if(this.localItem===null){
+      this.todosArr = []
+    }else{
+      console.log(this.localItem)
+      this.todosArr = JSON.parse(this.localItem);
+    }  
   }
 
   ngOnInit(): void {
@@ -51,6 +27,7 @@ export class ToDoListComponent implements OnInit {
   deleteTodo(todo:Todo){
     this.todosArr.splice(this.todosArr.indexOf(todo),1);
     console.log(`ToDoItem: ${todo.title} has been deleted.`)
+    localStorage.setItem("todosArrString",JSON.stringify(this.todosArr))
   }
 
   //Add todo to todosArr:
@@ -63,6 +40,7 @@ export class ToDoListComponent implements OnInit {
       active: true,
     });
     console.log(`ToDoItem: ${todo.title} has been added to TODO list.`);
+    localStorage.setItem("todosArrString",JSON.stringify(this.todosArr))
 
   }
 
