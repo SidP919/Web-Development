@@ -21,15 +21,16 @@ Completion Status - In Progress
   
   7> Assignment-07 - Weather Web App - https://sidp919.github.io/Web-Development/Assignment_07/index.html
 
-  8> Assignment-08 - BloG-It-NoW App - https://github.com/SidP919/Web-Development/tree/master/Assignment_08#readme
+  8> Assignment-08 - BloG-It-NoW Full-Stack Web App - https://blog-it-now.up.railway.app
   
-  9> Angular-Web-App - 01 - To-Do-List App - https://github.com/SidP919/Web-Development/tree/master/Angular/to_do_list#todolist
+  9> To-Do-List Angular Web App - https://sidp919.github.io/ToDoList-AngularApp/
 
 #
 
 Developed By:
 
-Sidharth Pandey( Sidp0008@gmail.com)
+**Sidharth Pandey**
 
+[![Email](https://img.shields.io/badge/Email-6EC72D)](mailto:Sidp0008@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-1B98F5)](https://linkedin.com/in/sidp919)
 
-Happy Learning! ☺️
+**Happy Learning!** ☺️
