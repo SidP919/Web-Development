@@ -2,7 +2,6 @@
 This repository showcases my journey to be a Full-Stack Web Developer. I have added all the code from the lectures I learned from and also the code for all the Projects I made during this journey. 
 Please check out the Lectures and Assignments(Projects/Apps) I developed in action at https://sidp919.github.io/Web-Development/
 
-Completion Status - In Progress
 #
 
 # Check-out various projects made through Assignments in this repo at below links:
