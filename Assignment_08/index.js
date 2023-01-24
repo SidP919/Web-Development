@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+require('dotenv').config()
 
 //set ejs as the view engine
 app.set('view engine','ejs');
@@ -30,7 +31,7 @@ app.use(methodOverride('_method'));
 const mongoose = require('mongoose');
 
 //make a connection to mongodb
-mongoose.connect('mongodb://localhost:27017/bloggingWebApp', 
+mongoose.connect(process.env.MONGODB_URI, 
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -98,8 +99,7 @@ app.use(otherRoutes);
 
 
 
-
-//local server setup:
-app.listen(3000,()=>{
-    console.log('Server running at port 3000...');
+const PORT = process.env.PORT;
+app.listen(PORT,()=>{
+    console.log(`Server running at port:${PORT}`);
 });
