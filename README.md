@@ -16,13 +16,13 @@ Please check out the Lectures and Assignments(Projects/Apps) I developed in acti
   
   5> Assignment-05 - Portfolio - https://sidp919.github.io/Web-Development/Assignment-05/index.html
   
-  6> Assignment-06 - To-Do-List App - https://sidp919.github.io/Web-Development/Assignment_06/index.html
+  6> To-Do-List App( developed using DOM Manipulation) - https://sidp919.github.io/Web-Development/Assignment_06/index.html
   
-  7> Assignment-07 - Weather Web App - https://sidp919.github.io/Web-Development/Assignment_07/index.html
+  7> Weather Web App( developed using jQuery) - https://sidp919.github.io/Web-Development/Assignment_07/index.html
 
-  8> Assignment-08 - BloG-It-NoW Full-Stack Web App - https://blog-it-now.up.railway.app
+  8> To-Do-List Angular Web App - https://sidp919.github.io/ToDoList-AngularApp/
   
-  9> To-Do-List Angular Web App - https://sidp919.github.io/ToDoList-AngularApp/
+  9> BloG-It-NoW Full-Stack Web App( developed using MongoDB, ExpressJS, EJS, NodeJS) - https://blog-it-now.up.railway.app
 
 #
 
