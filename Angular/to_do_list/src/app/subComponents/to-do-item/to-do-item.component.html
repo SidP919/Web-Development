@@ -1,6 +1,6 @@
 <div class="border border-white border-3 bg-primary rounded-3 d-block h-100">
-    <h4 class="d-inline-block form-control-sm">{{toDoItem.srNo}}-&nbsp;<u>{{toDoItem.title}}</u></h4>
-    <p class="form-control-sm d-block">{{toDoItem.desc.substring(0,48)}}...</p>
+    <h4 class="d-inline-block form-control-sm">{{this.toDoItem.active?itemIndex+1:compItemIndex+1}} - &nbsp;<u>{{toDoItem.title}}</u></h4>
+    <p class="form-control-sm d-block">{{toDoItem.desc.substring(0,100)}}{{toDoItem.desc.length>100?"...":""}}</p>
     <div class="mb-1 d-block">
         <div *ngIf="this.toDoItem.active;" class="mx-2 my-1 d-inline-block">
             <img src="./../../../assets/images/tick_symbol.png" alt="Completed" data-toggle="tooltip" title="Mark as Completed" (click)="onComplete(toDoItem)"/>

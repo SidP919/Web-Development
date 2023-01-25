@@ -10,6 +10,12 @@ export class ToDoItemComponent implements OnInit {
   @Input()
   toDoItem: Todo = new Todo;
 
+  @Input()
+  itemIndex: number = 0;
+
+  @Input()
+  compItemIndex:number = 0;
+
   //Create EventEmitter todoDeleteEmitter to emit objects of type Todo:
   @Output()
   todoDeleteEmitter: EventEmitter<Todo> = new EventEmitter();

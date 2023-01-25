@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div *ngFor="let todo of todosArr" class="col-lg-3 col-md-4 col-sm-4 col-6 mb-2 todo-size">
-                <app-to-do-item [toDoItem] = "todo" (todoDeleteEmitter)="deleteTodo($event)" (todoCompletedEmitter)="markAsCompleted($event)"></app-to-do-item>
+                <app-to-do-item [toDoItem] = "todo" (todoDeleteEmitter)="deleteTodo($event)" (todoCompletedEmitter)="markAsCompleted($event)" [itemIndex]="todosArr.indexOf(todo)"></app-to-do-item>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
     <div class="container">
         <div class="row">
             <div *ngFor="let todo of todosCompleted" class="col-lg-3 col-md-4 col-sm-4 col-6 mb-2 todo-size">
-                <app-to-do-item [toDoItem] = "todo" (todoDeleteEmitter)="deleteTodoC($event)"></app-to-do-item>
+                <app-to-do-item [toDoItem] = "todo" (todoDeleteEmitter)="deleteTodoC($event)" [compItemIndex]="todosCompleted.indexOf(todo)"></app-to-do-item>
             </div>
         </div>
     </div>
