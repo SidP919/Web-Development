@@ -4,10 +4,7 @@
         <input type="text" class="mx-2 border border-primary border-3 bg-white rounded-3 w-50 min-vw-50" 
             placeholder="For ex. Study" id="taskTitle" name="taskTitle" 
             [(ngModel)]="taskTitle" required>
-        <div class="valid-feedback mx-2">
-            <h6>Seems fine!</h6>
-        </div>
-        <div class="invalid-feedback mx-2">
+        <div class="mx-2 invisible text-danger" id="invalid-title">
             <h6>Please provide a valid Title</h6>
         </div>
     </div>
@@ -16,10 +13,7 @@
         <textarea rows="4" cols="35" id="taskDescription" name="taskDescription"
             class="d-block mx-2 border border-primary border-3 bg-white rounded-3 w-75 min-vw-75" 
             [(ngModel)]="taskDescription" required>Description of task</textarea>
-        <div class="valid-feedback mx-2">
-            <h6>Seems fine!</h6>
-        </div>
-        <div class="invalid-feedback mx-2">
+        <div class="mx-2 invisible text-danger" id="invalid-description">
             <h6>Please provide a valid Description</h6>
         </div>
     </div>

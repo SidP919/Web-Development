@@ -6,7 +6,7 @@ import { Todo } from 'src/app/models/Todo';
   templateUrl: './add-to-do-item.component.html',
   styleUrls: ['./add-to-do-item.component.css']
 })
-export class AddToDoItemComponent implements OnInit {
+export class AddToDoItemComponent {
   
   taskTitle:string = "";
   taskDescription:string = "";
@@ -18,31 +18,16 @@ export class AddToDoItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.validateAddTodoForm();
-  }
-
-  validateAddTodoForm(): void {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.form-validate')
-    
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event: { preventDefault: () => void; stopPropagation: () => void; }) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-    });
-  }
-
   //Emit task details to to-do-list component:
   onSubmit(){
-
+    const invalidTitle = document.getElementById("invalid-title");
+    const invalidDescription = document.getElementById("invalid-description");
+    if(invalidTitle){
+      invalidTitle.classList.add("invisible");
+    }
+    if(invalidDescription){
+      invalidDescription.classList.add("invisible");
+    }
     if(this.taskTitle!== "" && this.taskDescription!== ""){
       this.todo.title=this.taskTitle;
       this.todo.desc=this.taskDescription;
@@ -52,6 +37,17 @@ export class AddToDoItemComponent implements OnInit {
     }
     else{
       console.log("Add Todo Form is not filled with valid details.");
+      if(!this.taskTitle){
+        
+        if(invalidTitle){
+          invalidTitle.classList.remove("invisible");
+        }
+      }
+      if(!this.taskDescription){
+        if(invalidDescription){
+          invalidDescription.classList.remove("invisible");
+        }
+      }
     }
   }
 
