@@ -2,7 +2,6 @@
 This repository showcases my journey to be a Full-Stack Web Developer. I have added all the code from the lectures I learned from and also the code for all the Projects I made during this journey. 
 Please check out the Lectures and Assignments(Projects/Apps) I developed in action at https://sidp919.github.io/Web-Development/
 
-Completion Status - In Progress
 #
 
 # Check-out various projects made through Assignments in this repo at below links:
@@ -17,19 +16,20 @@ Completion Status - In Progress
   
   5> Assignment-05 - Portfolio - https://sidp919.github.io/Web-Development/Assignment-05/index.html
   
-  6> Assignment-06 - To-Do-List App - https://sidp919.github.io/Web-Development/Assignment_06/index.html
+  6> To-Do-List App( developed using DOM Manipulation) - https://sidp919.github.io/Web-Development/Assignment_06/index.html
   
-  7> Assignment-07 - Weather Web App - https://sidp919.github.io/Web-Development/Assignment_07/index.html
+  7> Weather Web App( developed using jQuery) - https://sidp919.github.io/Web-Development/Assignment_07/index.html
 
-  8> Assignment-08 - BloG-It-NoW App - https://github.com/SidP919/Web-Development/tree/master/Assignment_08#readme
+  8> To-Do-List Angular Web App - https://sidp919.github.io/ToDoList-AngularApp/
   
-  9> Angular-Web-App - 01 - To-Do-List App - https://github.com/SidP919/Web-Development/tree/master/Angular/to_do_list#todolist
+  9> BloG-It-NoW Full-Stack Web App( developed using MongoDB, ExpressJS, EJS, NodeJS) - https://blog-it-now.up.railway.app
 
 #
 
 Developed By:
 
-Sidharth Pandey( Sidp0008@gmail.com)
+**Sidharth Pandey**
 
+[![Email](https://img.shields.io/badge/Email-6EC72D)](mailto:Sidp0008@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-1B98F5)](https://linkedin.com/in/sidp919)
 
-Happy Learning! ☺️
+**Happy Learning!** ☺️
