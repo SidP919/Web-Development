@@ -12,6 +12,10 @@ export class ToDoListComponent implements OnInit {
   localItemC:any = "";
   todosArr: Todo[] = [];
   todosCompleted: Todo[] = [];
+  
+  //toast message
+  toastMsg:String = "";
+
   constructor() {
     this.localItem = localStorage.getItem("todosArrString");
     if(this.localItem===null){
@@ -26,7 +30,7 @@ export class ToDoListComponent implements OnInit {
     }else{
       console.log("Completed ToDo List: " + this.localItemC)
       this.todosCompleted = JSON.parse(this.localItemC);
-    } 
+    }
   }
 
   ngOnInit(): void {
@@ -37,13 +41,16 @@ export class ToDoListComponent implements OnInit {
     this.todosArr.splice(this.todosArr.indexOf(todo),1);
     console.log(`ToDoItem: ${todo.title} has been deleted.`)
     localStorage.setItem("todosArrString",JSON.stringify(this.todosArr))
+
+    // this.setToastMsg();
+    this.showToastMsg("Selected task has been deleted successfully.");
+
   }
 
   //Add todo to todosArr:
   addToDo(todo:Todo){
 
     this.todosArr.push({
-      srNo: this.todosArr.length + 1,
       title: todo.title,
       desc: todo.desc,
       active: true,
@@ -51,6 +58,8 @@ export class ToDoListComponent implements OnInit {
     console.log(`ToDoItem: ${todo.title} has been added to TODO list.`);
     localStorage.setItem("todosArrString",JSON.stringify(this.todosArr))
 
+    // this.setToastMsg();
+    this.showToastMsg("Your new task has been created successfully.");
   }
 
   //Add todo to todosCompleted and delete from todosArr:
@@ -61,7 +70,9 @@ export class ToDoListComponent implements OnInit {
     this.todosCompleted.push(todo);
     console.log(`ToDoItem: ${todo.title} has been added to Completed TODO list.`);
     localStorage.setItem("todosArrStringC",JSON.stringify(this.todosCompleted))
-    
+
+    // this.setToastMsg();
+    this.showToastMsg("Selected task has been marked as completed.");
   }
 
   //Delete todo from todosCompleted:
@@ -69,6 +80,23 @@ export class ToDoListComponent implements OnInit {
     this.todosCompleted.splice(this.todosCompleted.indexOf(todo),1);
     console.log(`ToDoItem: ${todo.title} has been deleted.`)
     localStorage.setItem("todosArrStringC",JSON.stringify(this.todosCompleted))
+
+    // this.setToastMsg();
+    this.showToastMsg("Selected task has been deleted successfully.");
   }
 
+  //shows success toast
+  async showToastMsg(toastMsg:String) {
+    this.toastMsg = toastMsg;
+    const liveToast = document.getElementById("liveToast");
+    if(liveToast){
+      console.log("Show toast");
+      liveToast.classList.add("fade","show");
+      liveToast.classList.remove("hide");
+      setTimeout(() => {
+        liveToast.classList.add("hide");
+        liveToast.classList.remove("show");
+      }, 2500)
+    }
+  }
 }
