@@ -1,13 +1,21 @@
-# ToDoList
+# **ToDoList (Angular) Web Application**
+
+A **ToDoList** app( ***developed using Angular Framework***) which helps you in keeping a record of your tasks(or as we call them **"ToDos"**).\
+It remembers your ToDos for you by using your local storage.\
+Just add a task and its description(upto 100 characters) and come back whenever you want to mark them as completed or to delete them.\
+\
+**ToDoList-App is Live:** **[https://my-todo-list-web.netlify.app](https://my-todo-list-web.netlify.app/)**\
+\
+**Current Deployment Status At** [![Netlify Status](https://api.netlify.com/api/v1/badges/6dc4ad9d-6195-46db-8418-beed4b44474f/deploy-status)](https://app.netlify.com/sites/my-todo-list-web/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
-## Development server
+## **Development server**
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
-# Application notes:
+# **Application notes**
 
 NPM Packages required to be downloaded and setup prior to working on this application:
 
