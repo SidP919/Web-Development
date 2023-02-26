@@ -22,7 +22,7 @@ Please check out the Lectures and Assignments(Projects/Apps) I developed in acti
 
   8> To-Do-List Angular Web App - https://my-todo-list-web.netlify.app/
   
-  9> BloG-It-NoW Full-Stack Web App( developed using MongoDB, ExpressJS, EJS, NodeJS) - https://blog-it-now.up.railway.app
+  9> BloG-It-NoW Full-Stack Web App( developed using MongoDB, ExpressJS, EJS, NodeJS) - https://blog-it-now.onrender.com
 
 #
 

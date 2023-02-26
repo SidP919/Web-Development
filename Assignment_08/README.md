@@ -1,6 +1,6 @@
 # BloG-It-NoW Full-Stack Web Application
 
-Live Link of our Blog-It-NoW Full-Stack Web Application: [https://blog-it-now.up.railway.app](https://blog-it-now.up.railway.app)
+Live Link of our Blog-It-NoW Full-Stack Web Application: [https://blog-it-now.onrender.com](https://blog-it-now.onrender.com)
 
 This Web App uses following:
 
